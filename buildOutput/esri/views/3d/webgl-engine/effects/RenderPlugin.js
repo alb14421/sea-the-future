@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports","../../../../core/Accessor"],function(e,r){"use strict";const n={required:[]};class s extends r{precompile(e){return!!this.acquireTechniques(e)}consumes(){return n}get usedMemory(){return 0}get renderOccludedFlags(){return 1}get isDecoration(){return!1}get readyToRun(){return!1}get numGeometries(){return 0}get hasOccludees(){return!1}get hasEmissions(){return!1}forEachGeometry(e){}}e.AsyncRenderPlugin=class extends s{},e.ConsumesDepth={required:[2]},e.ConsumesNone=n,e.SyncRenderPlugin=class extends s{},Object.defineProperty(e,Symbol.toStringTag,{value:"Module"})});

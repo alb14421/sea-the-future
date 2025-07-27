@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports"],function(t){"use strict";function e(t){const e=new Map;let n=0;return t.forEach(t=>t.forEach(({name:t,count:o})=>{e.set(t,n),16===o?n+=4:9===o?n+=3:++n})),e}t.fromBuffers=function(t){return e(Array.from(t.values()).map(({layout:t})=>t))},t.fromLayout=function(t){let e=0;return new Map(t.map(({name:t,count:n})=>{const o=[t,e];return 16===n?e+=4:9===n?e+=3:++e,o}))},t.fromLayouts=e,Object.defineProperty(t,Symbol.toStringTag,{value:"Module"})});

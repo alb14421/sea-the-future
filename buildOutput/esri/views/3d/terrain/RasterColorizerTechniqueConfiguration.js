@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports","../../../chunks/tslib.es6","./TileBlendTechniqueConfiguration","../webgl-engine/core/shaderTechnique/ShaderTechniqueConfiguration"],function(e,r,o,t){"use strict";class i extends o.TileBlendTechniqueConfiguration{constructor(){super(...arguments),this.colorizerType=0,this.stretchType=0,this.applyColormap=!0,this.requireBilinearWithNN=!1}}r.__decorate([t.parameter({count:3})],i.prototype,"colorizerType",void 0),r.__decorate([t.parameter({count:2})],i.prototype,"stretchType",void 0),r.__decorate([t.parameter()],i.prototype,"applyColormap",void 0),r.__decorate([t.parameter()],i.prototype,"requireBilinearWithNN",void 0),e.RasterColorizerTechniqueConfiguration=i,Object.defineProperty(e,Symbol.toStringTag,{value:"Module"})});

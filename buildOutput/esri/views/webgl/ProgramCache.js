@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports","../../core/has","./Program"],function(r,t,e){"use strict";r.ProgramCache=class{constructor(r){this._rctx=r,this._store=new Map}dispose(){this._store.forEach(r=>r.dispose()),this._store.clear()}acquire(r,t,s,o){const i=r+t+JSON.stringify(Array.from(s.entries())),c=this._store.get(i);if(null!=c)return c.ref(),c;const n=new e.Program(this._rctx,r,t,s,o);return n.ref(),this._store.set(i,n),n}get test(){}},Object.defineProperty(r,Symbol.toStringTag,{value:"Module"})});

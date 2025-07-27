@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports","../core/shaderLibrary/Slice.glsl","../core/shaderLibrary/Transform.glsl","../core/shaderLibrary/attributes/VertexColor.glsl","../core/shaderLibrary/util/View.glsl","../core/shaderModules/Float4PassUniform","../core/shaderModules/glsl","./OutputColorHighlightOID.glsl","../../../webgl/ShaderBuilder","../../../../chunks/NativeLine.glsl"],function(e,r,l,s,i,o,a,t,d,u){"use strict";e.build=u.build,Object.defineProperty(e,Symbol.toStringTag,{value:"Module"})});

@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports","../../core/has"],function(e,i){"use strict";e.Uniform=class{constructor(e,i,t,s,a=null){if(this.name=e,this.type=i,this.arraySize=a,this.bind={0:null,1:null,2:null},s)switch(t){case void 0:break;case 0:this.bind[0]=s;break;case 1:this.bind[1]=s;break;case 2:this.bind[2]=s}}equals(e){return this.type===e.type&&this.name===e.name&&this.arraySize===e.arraySize}},Object.defineProperty(e,Symbol.toStringTag,{value:"Module"})});

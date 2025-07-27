@@ -1,0 +1,5 @@
+/*
+All material copyright ESRI, All Rights Reserved, unless otherwise specified.
+See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+*/
+import{d as s}from"../../chunks/gfxUtils.js";import"../../chunks/assets.js";import"../../config.js";import"../../core/lang.js";import"../../chunks/object.js";import"../../request.js";import"../../kernel.js";import"../../core/urlUtils.js";import"../../core/Error.js";import"../../chunks/Logger.js";import"../../chunks/string.js";import"../../chunks/jsonUtils.js";import"../../chunks/MapUtils.js";import"../../core/promiseUtils.js";import"../../chunks/handleUtils.js";import"../../chunks/events.js";import"../../chunks/maybe.js";import"../../chunks/persistableUrlUtils.js";import"../../Color.js";import"../../chunks/colorUtils.js";import"../../chunks/mathUtils.js";import"../../chunks/ensureType.js";import"../../chunks/LRUCache.js";import"../../chunks/MemCache.js";import"../../chunks/screenUtils.js";import"../../symbols/support/cimSymbolUtils.js";import"../../chunks/utils6.js";import"../../chunks/defaultCIMValues.js";const t=s;export{t as defaultThematicColor};

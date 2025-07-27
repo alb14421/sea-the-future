@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports","./BaseRasterProcessorTechnique","../../shaders/raster/processor/FocalStatisticsShader"],function(s,t,e){"use strict";class a extends t.BaseRasterProcessorTechnique{constructor(){super(...arguments),this.name="RasterFocalStatisticsProcessor",this.type=20,this.shaders={focalStatistics:new e.FocalStatisticsShader}}_process(s,t){const e=s.rasterFunction.parameters,a={rows:e.kernelRows,cols:e.kernelCols,statisticsType:e.statisticsType,fill:e.fillNoDataOnly},i={clampRange:e.clampRange},o=this._getCommonConfig(s,t),r={shader:this.shaders.focalStatistics,uniforms:{config:o,focalStatisticsConfig:i},defines:a,optionalAttributes:null,useComputeBuffer:!1},{painter:c,context:n}=s;c.submitDrawMesh(n,r,c.quadMesh)}}s.FocalStatisticsTechnique=a,Object.defineProperty(s,Symbol.toStringTag,{value:"Module"})});

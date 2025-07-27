@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["../chunks/tslib.es6","../Color","./ElevationProfileLine","../core/accessorSupport/decorators/property","../core/has","../core/Logger","../core/RandomLCG","../core/accessorSupport/decorators/subclass"],function(o,e,r,t,s,c,n,p){"use strict";let a=class extends r{constructor(o){super(o),this.type="ground",this.color=new e("#ff7f00")}};return o.__decorate([t.property()],a.prototype,"type",void 0),o.__decorate([t.property({type:e,nonNullable:!0})],a.prototype,"color",void 0),a=o.__decorate([p.subclass("esri.analysis.ElevationProfileLineGround")],a),a});

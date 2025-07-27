@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["require","exports","../../core/shaderTechnique/ReloadableShaderModule","../../core/shaderTechnique/ShaderTechnique","./bufferLayouts","../../../../../chunks/EdgeShader.glsl","../../../../webgl/renderState"],function(e,r,d,a,t,i,n){"use strict";class o extends a.ShaderTechnique{constructor(r,a){super(r,a,new d.ReloadableShaderModule(i.EdgeShader,()=>new Promise((r,d)=>e(["../../shaders/sources/edgeRenderer/EdgeShader.glsl"],r,d))),a.silhouette?t.SilhouetteEdgeLocations:t.RegularEdgeLocations)}initializePipeline(){return n.makePipelineState({blending:n.separateBlendingParams(1,1,0,1,32774,32776),depthTest:{func:515},colorWrite:n.defaultColorWrite})}}r.EdgeShaderTechnique=o,Object.defineProperty(r,Symbol.toStringTag,{value:"Module"})});

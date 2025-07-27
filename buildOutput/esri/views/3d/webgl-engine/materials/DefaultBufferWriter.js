@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports","../../../../chunks/vec32","../../../../core/libs/gl-matrix-2/factories/vec3f64","../../../../geometry/support/buffer/BufferView","../lib/RayIntersections","./internal/bufferWriterUtils"],function(e,t,r,i,n,o){"use strict";const s=r.create();e.DefaultBufferWriter=class{constructor(e){this.layout=e}elementCount(e){return e.get("position").indices.length}write(e,t,r,i,n,s){return o.writeAttributes(r,i,this.layout,e,t,n,s)}intersect(e,r,o,u,c,f,l){const a=this.layout.createView(e).getField("position",i.BufferViewVec3f);if(null==a)return;const d=t.sub(s,f,c),y=a.count/3,p=u.options.normalRequired;n.intersectRenderGeometryTriangles(c,d,0,y,a.typedBuffer,a.typedBufferStride,p,(e,t,r)=>l(e,r,t))}},Object.defineProperty(e,Symbol.toStringTag,{value:"Module"})});

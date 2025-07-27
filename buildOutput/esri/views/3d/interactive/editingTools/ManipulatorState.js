@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports","../Manipulator3D"],function(t,e){"use strict";t.ManipulatorState=class{constructor(){this.grabbingState=0,this.zManipulator=null,this.firstSelected=null,this.numSelected=0,this.firstGrabbedXY=null}update(t){this.grabbingState=0,this.zManipulator=null,this.numSelected=0,this.firstSelected=null,this.firstGrabbedXY=null,t.forEachManipulator((t,i)=>{if(0===i&&(this.zManipulator=t),t instanceof e.Manipulator3D&&(t.selected&&(0===this.numSelected&&(this.firstSelected=t),this.numSelected++),null==this.firstGrabbedXY&&t.grabbing&&1===i&&(this.firstGrabbedXY=t)),t.grabbing)switch(this.grabbingState|=1,i){case 0:this.grabbingState|=2;break;case 1:this.grabbingState|=4}})}},Object.defineProperty(t,Symbol.toStringTag,{value:"Module"})});

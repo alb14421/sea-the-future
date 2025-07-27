@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports","../core/timeUtils","./locale","../chunks/datetime"],function(e,t,n,o){"use strict";function i(){const e=n.getLocale();return"bs"===n.getLocaleLanguage(e)?"hr":e}e.formatDuration=function(e,n="milliseconds",l={}){const r={locale:i(),numberingSystem:"latn"};let c;return c=e?o.Duration.fromMillis(t.convertTime(e,n,"milliseconds"),r).rescale():o.Duration.fromObject({seconds:0},r),c.toHuman({listStyle:"narrow",unitDisplay:"long",...l})},Object.defineProperty(e,Symbol.toStringTag,{value:"Module"})});

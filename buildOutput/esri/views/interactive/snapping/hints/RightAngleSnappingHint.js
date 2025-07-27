@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports","../../../../core/has","../../../../core/Logger","../../../../chunks/vec32","./SnappingHint"],function(e,t,r,n,s){"use strict";class i extends s.SnappingHint{constructor(e,t,r,n,s=3){super(n,s),this.previousVertex=e,this.centerVertex=t,this.nextVertex=r}equals(e){return e instanceof i&&n.exactEquals(this.previousVertex,e.previousVertex)&&n.exactEquals(this.centerVertex,e.centerVertex)&&n.exactEquals(this.nextVertex,e.nextVertex)}}e.RightAngleSnappingHint=i,Object.defineProperty(e,Symbol.toStringTag,{value:"Module"})});

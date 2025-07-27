@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports","../../../../chunks/tslib.es6","../core/shaderLibrary/attributes/InstancedDoubleConfiguration","../core/shaderTechnique/ShaderTechniqueConfiguration"],function(e,t,i,o){"use strict";class r extends i.InstancedDoubleConfiguration{constructor(){super(...arguments),this.output=0,this.oitPass=0,this.hasSlicePlane=!1,this.hasHighlightMixTexture=!1,this.bindType=1,this.instanced=!1,this.writeDepth=!0}}t.__decorate([o.parameter({count:10})],r.prototype,"output",void 0),t.__decorate([o.parameter({count:3})],r.prototype,"oitPass",void 0),t.__decorate([o.parameter()],r.prototype,"hasSlicePlane",void 0),t.__decorate([o.parameter()],r.prototype,"hasHighlightMixTexture",void 0),e.DefaultTechniqueConfiguration=r,Object.defineProperty(e,Symbol.toStringTag,{value:"Module"})});

@@ -1,0 +1,5 @@
+/*
+All material copyright ESRI, All Rights Reserved, unless otherwise specified.
+See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+*/
+import{e}from"./mathUtils.js";import{c as r}from"./vec3f64.js";import{a as t,c as s,b as n,w as a}from"./projectBuffer.js";import{x as o}from"./unitUtils.js";function i(e,r,i,u){if(null==r||null==u)return!1;const f=t(r,u);if(null==f?.projector)return!1;if(f.projector===s)return i[0]=e[0],i[1]=e[1],i[2]=e[2],i[3]=e[3],!0;const{source:p,dest:m,projector:d}=f;if(3===m.spatialReferenceId){const r=n[p.spatialReferenceId][2];return null!=r&&(r(e,0,l,0),a(l,0,i,0),i[3]=c(l[1],e[2],e[3],o.radius),!0)}if(2!==p.spatialReferenceId&&5!==p.spatialReferenceId||11!==m.spatialReferenceId){d(e,0,i,0);const r=p.metersPerUnit??1,t=m.metersPerUnit??1;i[3]=e[3]*r/t}else{const r=n[p.spatialReferenceId][1],t=n[1][11];let s=e[3];null!=r&&null!=t&&(s=c(e[1],e[2],e[3],o.radius)),d(e,0,i,0),i[3]=s}return!0}function c(e,r,t,s){const n=s+r;if(n<s/2||t>n)return Number.MAX_VALUE;const a=Math.abs(u*e)+Math.asin(t/n);return a>=Math.PI/2?Number.MAX_VALUE:t/Math.cos(a)}const l=r(),u=e(1);export{i as p};

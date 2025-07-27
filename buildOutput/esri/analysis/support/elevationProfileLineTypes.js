@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports","../ElevationProfileLine","../ElevationProfileLineGround","../ElevationProfileLineInput","../ElevationProfileLineQuery","../ElevationProfileLineScene","../../core/Collection"],function(e,o,i,n,t,l,r){"use strict";const a={base:o,key:"type",typeMap:{ground:i,input:n,query:t,scene:l},errorContext:"elevation-profile-line"},f=r.ofType(a);e.ElevationProfileLineCollection=f,e.elevationProfileLineTypes=a,Object.defineProperty(e,Symbol.toStringTag,{value:"Module"})});

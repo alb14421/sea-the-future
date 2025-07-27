@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports","./BaseRasterProcessorTechnique","../../shaders/raster/processor/CompositeBandShader"],function(e,s,t){"use strict";class o extends s.BaseRasterProcessorTechnique{constructor(){super(...arguments),this.name="RasterCompositeBandProcessor",this.type=5,this.shaders={compositeBand:new t.CompositeBandShader}}_process(e,s){const{rasters:t}=e.rasterFunction.parameters,o={constantCount:this._getConstantCount(t),imageCount:t?.length??1},n=this._getMultipleInputConfig(s,t),r=this._getCommonConfig(e,s),a={shader:this.shaders.compositeBand,uniforms:{config:r,...n},defines:o,optionalAttributes:null,useComputeBuffer:!1},{painter:i,context:u}=e;i.submitDrawMesh(u,a,i.quadMesh)}}e.CompositeBandTechnique=o,Object.defineProperty(e,Symbol.toStringTag,{value:"Module"})});

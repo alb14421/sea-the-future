@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports","../../../core/has"],function(e,t){"use strict";e.ManagedFBOResource=class{constructor(e,t){this.key=e,this._free=t,this.incarnation=0,this._refCount=1}retain(e=1){this._refCount+=e}release(){return 0===this._refCount?(console.log(`Releasing already released FBO attachment "${this.name}" in ${(new Error).stack}`),!0):(--this._refCount,0===this._refCount&&(this._free(),!0))}get test(){}},Object.defineProperty(e,Symbol.toStringTag,{value:"Module"})});

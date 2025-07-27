@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["require","exports","../core/shaderTechnique/ReloadableShaderModule","../core/shaderTechnique/ShaderTechnique","../lib/DefaultVertexBufferLayouts","../../../../chunks/ShadowCastAccumulate.glsl","../../../webgl/enums","../../../webgl/renderState"],function(e,t,a,i,l,r,u,n){"use strict";class d extends i.ShaderTechnique{constructor(t,i){super(t,i,new a.ReloadableShaderModule(r.ShadowCastAccumulate,()=>new Promise((t,a)=>e(["./ShadowCastAccumulate.glsl"],t,a))),l.Pos2Locations),this.primitiveType=u.PrimitiveType.TRIANGLE_STRIP}initializePipeline(e){const t={r:0===e.index,g:1===e.index,b:!1,a:!1};return n.makePipelineState({blending:n.add,colorWrite:t,depthTest:null,depthWrite:null})}}t.ShadowCastAccumulateTechnique=d,Object.defineProperty(t,Symbol.toStringTag,{value:"Module"})});

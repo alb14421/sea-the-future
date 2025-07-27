@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports","./BaseRasterProcessorTechnique","../../shaders/raster/processor/MaskShader"],function(e,s,a){"use strict";class t extends s.BaseRasterProcessorTechnique{constructor(){super(...arguments),this.name="RasterMaskProcessor",this.type=14,this.shaders={mask:new a.MaskShader}}_process(e,s){const a=e.rasterFunction.parameters,t={isMultiband:a.bandCount>1},r={includedRanges:[...a.includedRanges],noDataValues:[...a.noDataValues]},n=this._getCommonConfig(e,s),o={shader:this.shaders.mask,uniforms:{config:n,maskConfig:r},defines:t,optionalAttributes:null,useComputeBuffer:!1},{painter:i,context:u}=e;i.submitDrawMesh(u,o,i.quadMesh)}}e.MaskTechnique=t,Object.defineProperty(e,Symbol.toStringTag,{value:"Module"})});

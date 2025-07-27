@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports","../../sketch/constraints","./SnappingCandidate","../hints/IntersectionSnappingHint"],function(t,n,i,s){"use strict";class e extends i.SnappingCandidate{constructor(t,i,s,e){super(t,new n.PointConstraint(t),e,3),this.first=i,this.second=s}get hints(){return this.first.targetPoint=this.targetPoint,this.second.targetPoint=this.targetPoint,[...this.first.hints,...this.second.hints,new s.IntersectionSnappingHint(this.targetPoint,this.isDraped,this.domain)]}}t.IntersectionSnappingCandidate=e,Object.defineProperty(t,Symbol.toStringTag,{value:"Module"})});

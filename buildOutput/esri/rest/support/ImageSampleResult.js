@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports","../../chunks/tslib.es6","../../core/JSONSupport","../../core/accessorSupport/decorators/property","../../core/has","../../core/Logger","../../core/RandomLCG","../../core/accessorSupport/decorators/subclass","./ImageSample"],function(e,r,s,t,o,p,a,c,u){"use strict";return e.default=class extends s.JSONSupport{constructor(){super(...arguments),this.samples=[]}},r.__decorate([t.property({type:[u],json:{write:!0}})],e.default.prototype,"samples",void 0),e.default=r.__decorate([c.subclass("esri.rest.support.ImageSampleResult")],e.default),e.default});

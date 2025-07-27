@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports","../../../chunks/tslib.es6","../../../core/JSONSupport","../../../core/accessorSupport/decorators/property","../../../core/has","../../../core/Logger","../../../core/RandomLCG","../../../core/accessorSupport/decorators/subclass","../../../networks/support/NamedTraceConfiguration"],function(r,e,o,t,s,a,c,u,n){"use strict";return r.default=class extends o.JSONSupport{constructor(r){super(r),this.namedTraceConfigurations=[]}},e.__decorate([t.property({type:[n],json:{read:{source:"traceConfigurations"},write:{target:"traceConfigurations"}}})],r.default.prototype,"namedTraceConfigurations",void 0),r.default=e.__decorate([u.subclass("esri.rest.networks.support.QueryNamedTraceConfigurationsResult")],r.default),r.default});

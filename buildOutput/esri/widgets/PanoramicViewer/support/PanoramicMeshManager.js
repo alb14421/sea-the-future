@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["../../../core/Error","../../../core/promiseUtils","../../../core/workers/workers"],function(t,e,n){"use strict";class r{constructor(){this._connection=null,this.getFacesWithVertexAttributes=async e=>{if(!this._connection)throw new t("panoramic-mesh-manager:getFacesWithVertexAttributes","Panoramic mesh manager is not loaded");return await this._connection.invoke("getFacesWithVertexAttributes",e)}}destroy(){this._connection?.close()}async _startWorker(t){this._connection=await n.open("PanoramicMeshWorker",t)}static getInstance(){return r._instance||(r._instance=new r),r._instance}async load(t){return e.throwIfAborted(t),await this._startWorker(t),this}}return r});

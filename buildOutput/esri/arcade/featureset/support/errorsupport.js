@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports","../../../core/string"],function(e,t){"use strict";const r={Cancelled:"Cancelled",InvalidStatResponse:"Invalid statistics response from service",InvalidRequest:"Invalid request",RequestFailed:"Request failed - {reason}",MissingFeatures:"Missing features",AggregationFieldNotFound:"Aggregation field not found",DataElementsNotFound:"Data elements not found on service",NeverReach:"Encountered unreachable logic",NotImplemented:"Not implemented"};class s extends Error{constructor(e,a){super(t.replace(r[e],a)),this.declaredRootClass="esri.arcade.featureset.support.featureseterror",Error.captureStackTrace&&Error.captureStackTrace(this,s)}}e.FeatureSetError=s,e.featureSetErrorMessages=r,Object.defineProperty(e,Symbol.toStringTag,{value:"Module"})});

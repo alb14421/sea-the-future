@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports"],function(t){"use strict";const e="randomUUID"in crypto;function r(){if(e)return crypto.randomUUID();const t=crypto.getRandomValues(new Uint16Array(8));t[3]=4095&t[3]|16384,t[4]=16383&t[4]|32768;const r=e=>t[e].toString(16).padStart(4,"0");return r(0)+r(1)+"-"+r(2)+"-"+r(3)+"-"+r(4)+"-"+r(5)+r(6)+r(7)}t.generateBracedUUID=function(){return`{${r().toUpperCase()}}`},t.generateLowercaseBracedUUID=function(){return`{${r()}}`},t.generateUUID=r,t.normalizeGlobalID=function(t){const e=t.toUpperCase();return t.startsWith("{")?e:`{${e}}`},Object.defineProperty(t,Symbol.toStringTag,{value:"Module"})});

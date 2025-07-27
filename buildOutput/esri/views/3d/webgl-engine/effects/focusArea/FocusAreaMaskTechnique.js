@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["require","exports","../../core/shaderTechnique/ReloadableShaderModule","../../core/shaderTechnique/ShaderTechnique","../../lib/DefaultVertexBufferLayouts","../../../../../chunks/FocusAreaMask.glsl","../../../../webgl/renderState","../../../../webgl/VertexAttributeLocations"],function(e,r,a,t,o,s,u,i){"use strict";class l extends t.ShaderTechnique{constructor(r,t){super(r,t,new a.ReloadableShaderModule(s.FocusAreaMask,()=>new Promise((r,a)=>e(["../../shaders/FocusAreaMask.glsl"],r,a))),i.fromLayout(o.Pos3))}initializePipeline(){return u.makePipelineState({colorWrite:u.defaultColorWrite,depthTest:{func:515}})}}r.FocusAreaMaskTechnique=l,Object.defineProperty(r,Symbol.toStringTag,{value:"Module"})});

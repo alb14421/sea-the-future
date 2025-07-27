@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports","./ChangeSet"],function(e,t){"use strict";function r(e){return e.geometry.indexCount>=1}e.splitRenderGeometryChangeSetByMaterial=function(e){const a=new Map,n=r=>{let n=a.get(r);return n||(n=new t.MaterialChangeSet(e),a.set(r,n)),n};return e.removes.forEach(e=>{r(e)&&n(e.material).removes.push(e)}),e.adds.forEach(e=>{r(e)&&n(e.material).adds.push(e)}),e.updates.forEach(e=>{r(e.renderGeometry)&&n(e.renderGeometry.material).updates.push(e)}),a},Object.defineProperty(e,Symbol.toStringTag,{value:"Module"})});

@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports","../../../core/unitUtils","../gx/operatorGeneralize","../support/jsonConverter"],function(e,t,n,r){"use strict";e.execute=function(e,o,a={}){const{removeDegenerateParts:c=!1,unit:i}=a,u=r.getSpatialReference(e);i&&u&&(o=t.convertToSpatialReferenceUnit(o,i,u));const l=r.fromGeometry(e),s=n.execute(l.getGeometry(),o,c);return null==s?null:r.toGeometry(s,l.getSpatialReference())},e.executeMany=function(e,o,a={}){const{removeDegenerateParts:c=!1,unit:i}=a,u=r.getSpatialReference(e);i&&u&&(o=t.convertToSpatialReferenceUnit(o,i,u));const[l,s]=r.fromGeometries(e);return n.executeMany(l,o,c).map(e=>r.toGeometry(e,s))},Object.defineProperty(e,Symbol.toStringTag,{value:"Module"})});

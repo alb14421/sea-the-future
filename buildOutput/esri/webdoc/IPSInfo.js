@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["../chunks/tslib.es6","../core/Clonable","../core/JSONSupport","../core/accessorSupport/decorators/property","../core/has","../core/Logger","../core/RandomLCG","../core/accessorSupport/decorators/subclass","./ips/Configuration","./ips/PositioningService"],function(o,e,r,t,i,s,c,n,p,u){"use strict";let a=class extends(e.ClonableMixin(r.JSONSupport)){constructor(o){super(o),this.positioningService=null,this.configuration=null}};return o.__decorate([t.property({type:u,json:{write:{isRequired:!0}}})],a.prototype,"positioningService",void 0),o.__decorate([t.property({type:p,json:{write:!0}})],a.prototype,"configuration",void 0),a=o.__decorate([n.subclass("esri.webdoc.IPSInfo")],a),a});

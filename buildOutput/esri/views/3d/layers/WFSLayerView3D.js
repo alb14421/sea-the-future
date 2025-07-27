@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["../../../chunks/tslib.es6","../../../core/accessorSupport/decorators/property","../../../core/has","../../../core/Logger","../../../core/RandomLCG","../../../core/accessorSupport/decorators/subclass","../../../graphic/WFSGraphicOrigin","./FeatureLayerViewBase3D"],function(r,e,s,o,t,c,a,i){"use strict";let p=class extends i{constructor(){super(...arguments),this.type="wfs-3d"}get graphicOrigin(){return new a(this.layer)}};return r.__decorate([e.property()],p.prototype,"layer",void 0),r.__decorate([e.property()],p.prototype,"graphicOrigin",null),p=r.__decorate([c.subclass("esri.views.3d.layers.WFSLayerView3D")],p),p});

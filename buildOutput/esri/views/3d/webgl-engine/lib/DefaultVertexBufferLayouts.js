@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports","../../../webgl/enums","../../../webgl/VertexAttributeLocations","../../../webgl/VertexElementDescriptor"],function(e,t,o,r){"use strict";const n=[new r.VertexElementDescriptor("position",3,t.DataType.FLOAT,0,12)],i=[new r.VertexElementDescriptor("position",2,t.DataType.FLOAT,0,8)],s=o.fromLayout(i),p=[new r.VertexElementDescriptor("position",2,t.DataType.FLOAT,0,12),new r.VertexElementDescriptor("uv0",2,t.DataType.HALF_FLOAT,8,12)],a=[new r.VertexElementDescriptor("position",2,t.DataType.FLOAT,0,16),new r.VertexElementDescriptor("uv0",2,t.DataType.FLOAT,8,16)];e.NoVertex=[],e.Pos2=i,e.Pos2Locations=s,e.Pos2TexF16=p,e.Pos2TexF32=a,e.Pos3=n,Object.defineProperty(e,Symbol.toStringTag,{value:"Module"})});

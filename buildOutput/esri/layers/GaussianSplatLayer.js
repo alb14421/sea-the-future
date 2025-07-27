@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["../chunks/tslib.es6","../core/MultiOriginJSONSupport","../core/accessorSupport/decorators/property","../core/has","../core/Logger","../core/RandomLCG","../core/accessorSupport/decorators/subclass","./Layer","./mixins/OperationalLayer"],function(e,r,o,a,t,s,p,i,c){"use strict";let n=class extends(c.OperationalLayer(r.MultiOriginJSONMixin(i))){constructor(e){super(e),this.operationalLayerType="GaussianSplatLayer",this.type="gaussian-splat"}};return e.__decorate([o.property({json:{read:!1}})],n.prototype,"id",void 0),e.__decorate([o.property({type:["GaussianSplatLayer"],json:{read:!1}})],n.prototype,"operationalLayerType",void 0),e.__decorate([o.property({json:{read:!1}})],n.prototype,"type",void 0),n=e.__decorate([p.subclass("esri.layers.GaussianSplatLayer")],n),n});

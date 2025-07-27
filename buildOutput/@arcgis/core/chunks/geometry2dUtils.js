@@ -1,0 +1,5 @@
+/*
+All material copyright ESRI, All Rights Reserved, unless otherwise specified.
+See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+*/
+import"./mathUtils.js";import{d as t,j as s,k as n,g as r,i as a,h as o,a as c}from"./vec2.js";import{c as e}from"./vec2f64.js";function i(t,s){return t[0]*s[1]-t[1]*s[0]}function u(s,o,e,i,u=e){return t(d,i,e),t(b,o,u),function(t,s,a){const o=r(a,b)/n(a);c(t,a,o)}(l,0,d),a(s,u,l)}function f(n,r,a,c){t(d,r,a);const e=c/o(d);return s(n,a,d,e)}function p(n,r){const a=n.start,o=n.end,c=r.start,e=r.end,u=t(d,o,a),f=t(j,e,c),p=i(u,f);if(Math.abs(p)<=m)return[];const h=t(b,a,c),v=i(f,h)/p;return i(u,h),[s(l,a,u,v)]}function h(a,o,c){const e=[],i=t(d,a.end,a.start),u=t(j,a.start,o),f=n(i),p=2*r(i,u),h=p*p-4*f*(n(u)-c*c);if(0===h){const t=-p/(2*f);e.push(s(l,a.start,i,t))}else if(h>0){const t=Math.sqrt(h),n=(-p+t)/(2*f);e.push(s(l,a.start,i,n));const r=(-p-t)/(2*f);e.push(s(b,a.start,i,r))}return e}const m=1e-6,d=e(),j=e(),b=e(),l=e();export{f as a,p as b,h as i,u as p};

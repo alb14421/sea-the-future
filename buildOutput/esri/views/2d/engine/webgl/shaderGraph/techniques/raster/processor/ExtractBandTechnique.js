@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports","./BaseRasterProcessorTechnique","../../shaders/raster/processor/ExtractBandShader"],function(e,t,s){"use strict";class r extends t.BaseRasterProcessorTechnique{constructor(){super(...arguments),this.name="RasterExtractBandProcessor",this.type=10,this.shaders={extractBand:new s.ExtractBandShader}}_process(e,t){const s={bandIndexMat3:e.rasterFunction.parameters.bandIndexMat3},r=this._getCommonConfig(e,t),a={shader:this.shaders.extractBand,uniforms:{config:r,extractBandConfig:s},defines:{},optionalAttributes:null,useComputeBuffer:!1},{painter:n,context:o}=e;n.submitDrawMesh(o,a,n.quadMesh)}}e.ExtractBandTechnique=r,Object.defineProperty(e,Symbol.toStringTag,{value:"Module"})});

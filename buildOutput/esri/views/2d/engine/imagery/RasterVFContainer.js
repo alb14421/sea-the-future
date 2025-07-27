@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports","./BrushVectorField","../webgl/WGLContainer"],function(e,r,s){"use strict";e.RasterVFContainer=class extends s{constructor(){super(...arguments),this.symbolTypes=["triangle"]}prepareRenderPasses(e){const s=e.registerRenderPass({name:"imagery (vf)",brushes:[r],target:()=>this.children,drawPhase:1});return[...super.prepareRenderPasses(e),s]}doRender(e){this.visible&&1===e.drawPhase&&this.symbolTypes.forEach(r=>{e.renderPass=r,super.doRender(e)})}},Object.defineProperty(e,Symbol.toStringTag,{value:"Module"})});

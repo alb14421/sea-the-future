@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports","../../../support/buffer/InterleavedLayout","../../../../webgl/NoParameters"],function(e,r,t){"use strict";class o extends t.NoParameters{constructor(e,r,t,o,s){super(),this.hasVertexColors=e,this.textureCoordinateType=r,this.hasNormals=t,this.shadeNormals=o,this.applySSAO=s}}e.GeometryParameters=o,e.createVertexBufferLayout=function(e){const t=r.newLayout().vec3f("position");return e.hasNormals&&t.vec2i16("normalCompressed",{glNormalized:!0}),1===e.textureCoordinateType?t.vec2f("uv0"):2===e.textureCoordinateType&&(t.vec2f("uv0"),t.vec4u16("uvRegion",{glNormalized:!0})),e.hasVertexColors&&t.vec4u8("color",{glNormalized:!0}),t.freeze()},Object.defineProperty(e,Symbol.toStringTag,{value:"Module"})});

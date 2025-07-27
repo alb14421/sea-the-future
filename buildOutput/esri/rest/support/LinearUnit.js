@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports","../../chunks/tslib.es6","../../core/JSONSupport","../../core/accessorSupport/decorators/property","../../core/has","../../core/Logger","../../core/RandomLCG","../../core/accessorSupport/decorators/enumeration","../../core/accessorSupport/decorators/subclass","./networkEnums"],function(e,r,t,o,s,c,a,u,n,p){"use strict";return e.default=class extends t.JSONSupport{constructor(e){super(e),this.distance=0,this.units=null}},r.__decorate([o.property({json:{write:!0}})],e.default.prototype,"distance",void 0),r.__decorate([u.enumeration(p.linearUnitJsonMap)],e.default.prototype,"units",void 0),e.default=r.__decorate([n.subclass("esri.rest.support.LinearUnit")],e.default),e.default});

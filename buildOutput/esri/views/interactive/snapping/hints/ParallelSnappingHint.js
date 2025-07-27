@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports","../../../../core/has","../../../../core/Logger","../../../../chunks/vec32","./SnappingHint"],function(e,n,t,i,a){"use strict";class s extends a.SnappingHint{constructor(e,n,t,i=3){super(t,i),this.lineStart=e,this.lineEnd=n}equals(e){return e instanceof s&&i.exactEquals(this.lineStart,e.lineStart)&&i.exactEquals(this.lineEnd,e.lineEnd)}}e.ParallelSnappingHint=s,Object.defineProperty(e,Symbol.toStringTag,{value:"Module"})});

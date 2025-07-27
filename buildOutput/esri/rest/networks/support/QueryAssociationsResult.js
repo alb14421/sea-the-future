@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports","../../../chunks/tslib.es6","../../../core/JSONSupport","../../../core/accessorSupport/decorators/property","../../../core/has","../../../core/Logger","../../../core/RandomLCG","../../../core/accessorSupport/decorators/subclass","./Association"],function(s,o,e,r,t,c,a,u,p){"use strict";return s.default=class extends e.JSONSupport{constructor(s){super(s),this.associations=[]}},o.__decorate([r.property({type:[p],json:{write:!0}})],s.default.prototype,"associations",void 0),s.default=o.__decorate([u.subclass("esri.rest.networks.support.QueryAssociationsResult")],s.default),s.default});

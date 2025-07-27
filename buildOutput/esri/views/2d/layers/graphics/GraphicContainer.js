@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["./AGraphicContainer","../support/util"],function(e,r){"use strict";class i extends e.AGraphicContainer{renderChildren(e){for(const r of this.children)r.setTransform(e.state);if(super.renderChildren(e),this._updateAttributeView(),this.children.some(e=>e.hasData)){switch(e.drawPhase){case 1:this._renderChildren(e,0);break;case 16:this.hasHighlight&&this._renderHighlight(e)}this._boundsRenderer&&this._boundsRenderer.doRender(e)}}_renderHighlight(e){r.renderHighlight(e,!1,e=>{this._renderChildren(e,1)})}}return i});

@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports","../../../chunks/vec32","../../../core/libs/gl-matrix-2/factories/vec3f64","../webgl-engine/core/shaderModules/Float3BindUniform","../webgl-engine/core/shaderModules/Float3PassUniform","../webgl-engine/core/shaderModules/FloatPassUniform","../webgl-engine/core/shaderModules/glsl","../webgl-engine/core/shaderModules/Matrix4BindUniform","../../webgl/ShaderBuilder","../../../chunks/Precipitation.glsl"],function(e,i,l,o,r,n,s,d,a,g){"use strict";e.build=g.build,Object.defineProperty(e,Symbol.toStringTag,{value:"Module"})});

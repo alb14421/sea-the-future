@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports","../../../../../core/libs/gl-matrix-2/math/mat4","../../../../../core/libs/gl-matrix-2/factories/mat4f64","../../core/shaderModules/Float4BindUniform","../../core/shaderModules/FloatBindUniform","../../core/shaderModules/glsl","../../core/shaderModules/Matrix4PassUniform","../../../../webgl/ShaderBuilder","../../../../../chunks/Stars.glsl"],function(e,r,o,l,s,i,a,t,d){"use strict";e.build=d.build,Object.defineProperty(e,Symbol.toStringTag,{value:"Module"})});

@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports","../../../chunks/tslib.es6","../webgl-engine/core/shaderTechnique/ShaderTechniqueConfiguration","../webgl-engine/materials/DefaultTechniqueConfiguration"],function(e,t,n,i){"use strict";class o extends i.DefaultTechniqueConfiguration{constructor(){super(...arguments),this.geometry=0}}t.__decorate([n.parameter({count:3})],o.prototype,"geometry",void 0),e.SimpleAtmosphereTechniqueConfiguration=o,Object.defineProperty(e,Symbol.toStringTag,{value:"Module"})});

@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports","../../core/mathUtils","../../core/unitUtils","../../chunks/vec32","./plane"],function(t,e,r,n,a){"use strict";function s(t,e,s,i){const o=(c=e,Array.isArray(c[0])?(t,r)=>e[t][r]:(t,r)=>e[3*t+r]);var c;const l=i?r.getMetersPerUnitForSR(i)/r.getMetersPerVerticalUnitForSR(i):1;return a.fromManyPoints(t,(t,e)=>n.set(t,o(e,0)*l,o(e,1)*l,o(e,2)),s)}const i=a.create();t.fitPlane=s,t.leastSignificantAxis=function(t,r,n){const o=s(i,t,r,n)?a.getNormal(i):[0,0,1];return Math.abs(o[2])>Math.cos(e.deg2rad(80))?2:Math.abs(o[1])>Math.abs(o[0])?1:0},Object.defineProperty(t,Symbol.toStringTag,{value:"Module"})});

@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["../../chunks/tslib.es6","../../core/Clonable","../../core/accessorSupport/decorators/property","../../core/has","../../core/Logger","../../core/RandomLCG","../../core/accessorSupport/decorators/subclass"],function(e,r,s,o,t,c,a){"use strict";let p=class extends r.Clonable{constructor(e){super(e),this.type="web-scene"}equals(e){return this.type===e.type}};return e.__decorate([s.property()],p.prototype,"type",void 0),p=e.__decorate([a.subclass("esri.analysis.support.AnalysisOriginWebScene")],p),p});

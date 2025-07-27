@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports","../../../../chunks/tslib.es6","../../../../core/Logger","../../../../core/has","../../../../core/RandomLCG","../../../../core/Error","../../../../core/accessorSupport/decorators/subclass","./AGraphicContainer","../support/util"],function(e,r,s,t,a,i,h,n,o){"use strict";return e.default=class extends n.AGraphicContainer{get hasHighlight(){return this.children.some(e=>e.hasData)}renderChildren(e){this.attributeView.update(),16===e.drawPhase&&this.children.some(e=>e.hasData)&&(super.renderChildren(e),e.context.setColorMask(!0,!0,!0,!0),o.renderHighlight(e,!1,e=>{this._renderChildren(e,1)}))}},e.default=r.__decorate([h.subclass("esri.views.2d.layers.graphics.HighlightGraphicContainer")],e.default),e.default});

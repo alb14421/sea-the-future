@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports","../core/shaderLibrary/ScreenSpacePass.glsl","../core/shaderModules/FloatPassUniform","../core/shaderModules/glsl","../core/shaderModules/IntegerPassUniform","../core/shaderModules/Texture2DPassUniform","../../../webgl/NoParameters","../../../webgl/ShaderBuilder","../../../../chunks/OverlayCompositing.glsl"],function(e,r,s,a,o,l,i,t,d){"use strict";e.OverlayCompositingPassParameters=d.OverlayCompositingPassParameters,e.build=d.build,Object.defineProperty(e,Symbol.toStringTag,{value:"Module"})});

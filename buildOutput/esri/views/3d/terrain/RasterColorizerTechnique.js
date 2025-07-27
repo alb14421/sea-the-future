@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["require","exports","../../../chunks/RasterColorizer.glsl","../webgl-engine/core/shaderTechnique/ReloadableShaderModule","../webgl-engine/core/shaderTechnique/ShaderTechnique","../webgl-engine/lib/DefaultVertexBufferLayouts","../../webgl/VertexAttributeLocations"],function(e,r,o,l,t,a,i){"use strict";class n extends t.ShaderTechnique{constructor(r,t){super(r,t,new l.ReloadableShaderModule(o.RasterColorizer,()=>new Promise((r,o)=>e(["../webgl-engine/core/shaderLibrary/raster/RasterColorizer.glsl"],r,o))),i.fromLayout(a.Pos2TexF16))}}r.RasterColorizerTechnique=n,Object.defineProperty(r,Symbol.toStringTag,{value:"Module"})});

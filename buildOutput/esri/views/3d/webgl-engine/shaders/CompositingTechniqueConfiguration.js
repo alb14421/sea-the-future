@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports","../../../../chunks/tslib.es6","../core/shaderTechnique/ShaderTechniqueConfiguration"],function(e,t,o){"use strict";class i extends o.ShaderTechniqueConfiguration{constructor(){super(...arguments),this.blitMode=0,this.hasOpacityFactor=!1}}t.__decorate([o.parameter({count:4})],i.prototype,"blitMode",void 0),t.__decorate([o.parameter()],i.prototype,"hasOpacityFactor",void 0),e.CompositingTechniqueConfiguration=i,Object.defineProperty(e,Symbol.toStringTag,{value:"Module"})});

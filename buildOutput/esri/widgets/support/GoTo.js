@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports","../../chunks/tslib.es6","../../core/maybe","../../core/accessorSupport/decorators/property","../../core/has","../../core/Logger","../../core/RandomLCG","../../core/accessorSupport/decorators/subclass","./goToUtils"],function(o,e,r,t,s,c,i,p,a){"use strict";o.GoTo=o=>{const s=o;let c=class extends s{constructor(...o){super(...o),this.goToOverride=null,this.view=null}callGoTo(o){const{view:e}=this;return r.assertIsSome(e),this.goToOverride?this.goToOverride(e,o):a.goTo(e,o.target,o.options)}};return e.__decorate([t.property()],c.prototype,"goToOverride",void 0),e.__decorate([t.property()],c.prototype,"view",void 0),c=e.__decorate([p.subclass("esri.widgets.support.GoTo")],c),c},Object.defineProperty(o,Symbol.toStringTag,{value:"Module"})});

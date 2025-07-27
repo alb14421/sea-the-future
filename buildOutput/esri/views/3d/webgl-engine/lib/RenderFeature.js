@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports","../../../../core/has","../../../../core/NestedMap"],function(e,t,s){"use strict";e.setupFeatureDefaults=function(e=!t("disable-feature:high-quality-idle"),o=null){const u=new s.NestedMap;return e?(u.set(2,0,"low"!==o),u.set(2,3,"low"!==o),u.set(2,1,!0),u.set(2,4,!0),u.set(2,5,!0),u.set(2,8,!0)):(u.set(0,6,!0),u.set(0,7,!0),u.set(1,6,!0),u.set(1,7,!0)),u.set(2,6,!0),u.set(2,7,!0),u.set(2,2,!0),u},Object.defineProperty(e,Symbol.toStringTag,{value:"Module"})});

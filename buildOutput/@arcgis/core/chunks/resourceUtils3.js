@@ -1,0 +1,5 @@
+/*
+All material copyright ESRI, All Rights Reserved, unless otherwise specified.
+See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+*/
+import{h as e}from"../core/lang.js";class t{constructor(e){this.data=e,this.type="encoded-mesh-texture",this.encoding="image/ktx2"}}function n(e){return"encoded-mesh-texture"===e?.type}async function r(e){const t=new Blob([e]),n=await t.text();return JSON.parse(n)}async function a(n,r){if("image/ktx2"===r)return new t(n);const a=new Blob([n],{type:r});let s=URL.createObjectURL(a);switch(r){case"image/jpeg":s+="#.jpg";break;case"image/png":s+="#.png"}const o=new Image;if(e("esri-iPhone"))return new Promise((e,t)=>{const n=()=>{a(),e(o)},r=e=>{a(),t(e)},a=()=>{URL.revokeObjectURL(s),o.removeEventListener("load",n),o.removeEventListener("error",r)};o.addEventListener("load",n),o.addEventListener("error",r),o.src=s});try{o.src=s,await o.decode()}catch(e){console.warn("Failed decoding HTMLImageElement")}return URL.revokeObjectURL(s),o}export{t as E,a,n as i,r as j};

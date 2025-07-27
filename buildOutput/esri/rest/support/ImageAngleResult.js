@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports","../../chunks/tslib.es6","../../core/JSONSupport","../../core/accessorSupport/decorators/property","../../core/has","../../core/Logger","../../core/RandomLCG","../../core/accessorSupport/decorators/subclass","../../geometry/SpatialReference"],function(e,t,r,o,s,p,u,a,c){"use strict";return e.default=class extends r.JSONSupport{constructor(e){super(e),this.north=null,this.up=null,this.spatialReference=null}},t.__decorate([o.property({type:Number,json:{write:!0}})],e.default.prototype,"north",void 0),t.__decorate([o.property({type:Number,json:{write:!0}})],e.default.prototype,"up",void 0),t.__decorate([o.property({type:c,json:{write:!0}})],e.default.prototype,"spatialReference",void 0),e.default=t.__decorate([a.subclass("esri.rest.support.ImageAngleResult")],e.default),e.default});

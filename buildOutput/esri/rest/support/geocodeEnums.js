@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports","../../core/jsonMap"],function(e,t){"use strict";const s=t.strict()({DistanceMarker:"distance-marker",Locality:"locality",POI:"poi",PointAddress:"point-address",Postal:"postal",StreetAddress:"street-address",StreetInt:"street-intersection",StreetName:"street-name",Subaddress:"sub-address"}),r=t.strict()({localCity:"local-city",postalCity:"postal-city"});e.geocodeFeatureTypeJsonMap=s,e.geocodePreferredLabelJsonMap=r,Object.defineProperty(e,Symbol.toStringTag,{value:"Module"})});

@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["../chunks/tslib.es6","../core/Clonable","../core/accessorSupport/decorators/property","../core/has","../core/Logger","../core/RandomLCG","../core/accessorSupport/decorators/subclass"],function(e,s,r,o,i,t,c){"use strict";let l=class extends s.Clonable{constructor(e){super(e),this.lineVisible=!0}equals(e){return this===e||this.lineVisible===e.lineVisible}};return e.__decorate([r.property()],l.prototype,"lineVisible",void 0),l=e.__decorate([c.subclass("esri.analysis.ElevationProfileLineChartOptions")],l),l});

@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports","../../../core/Error","../../../core/lang","../../../core/promiseUtils","../MeshVertexAttributes","./meshCloneUtils","./vertexSpaceConversion"],function(e,t,r,o,s,n,i){"use strict";e.convertMeshVertexSpace=async function(e,c,l){await Promise.resolve(),o.throwIfAborted(l);const u=i.convertVertexSpace(e,c,{useEllipsoid:l?.useEllipsoid});if(!u)throw new t("meshUtils:convertVertexSpace()","Failed to convert to provided vertex space due to projection errors");return e.clone(n.addMeshCloneContext(void 0,{vertexAttributes:new s.MeshVertexAttributes({...u,uv:r.clone(e.vertexAttributes.uv),color:r.clone(e.vertexAttributes.color)}),vertexSpace:c,transform:null}))},Object.defineProperty(e,Symbol.toStringTag,{value:"Module"})});

@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["../../../chunks/tslib.es6","../../../core/accessorSupport/decorators/property","../../../core/has","../../../core/Logger","../../../core/RandomLCG","../../../core/accessorSupport/decorators/subclass","../../../graphic/GeoJSONGraphicOrigin","./FeatureLayerViewBase3D"],function(e,r,o,s,t,c,a,i){"use strict";let p=class extends i{constructor(){super(...arguments),this.type="geojson-3d"}get graphicOrigin(){return new a(this.layer)}};return e.__decorate([r.property()],p.prototype,"layer",void 0),e.__decorate([r.property()],p.prototype,"graphicOrigin",null),p=e.__decorate([c.subclass("esri.views.3d.layers.GeoJSONLayerView3D")],p),p});

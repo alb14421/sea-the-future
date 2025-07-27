@@ -1,0 +1,9 @@
+{
+  "builddate": "2025-07-27T15:30:30.290Z",
+  "commit": "dc07ab9824458d7c8be6f41020a84653d5bf521a",
+  "branch": "alb/hackathon",
+  "version": "4.34.0-next.46",
+  "@esri/calcite-components": "3.2.1",
+  "@esri/arcgis-html-sanitizer": "4.1.0",
+  "arcadeVersion": "1.32"
+}

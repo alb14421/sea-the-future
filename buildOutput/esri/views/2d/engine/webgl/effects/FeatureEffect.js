@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports","./Effect"],function(e,t){"use strict";class r extends t.Effect{constructor(e){super(),this.name=this.constructor.name,this.defines=[e]}dispose(){}bind({context:e,painter:t}){this._prev=e.getBoundFramebufferObject();const r=t.getFbos().effect0;e.bindFramebuffer(r),e.setColorMask(!0,!0,!0,!0),e.setClearColor(0,0,0,0),e.clear(16384)}unbind(){}draw(e,t){const{context:r,painter:s}=e,n=s.getPostProcessingEffects(t),o=r.getBoundFramebufferObject();for(const{postProcessingEffect:t,effect:r}of n)t.draw(e,o,r);r.bindFramebuffer(this._prev),r.setStencilTestEnabled(!1),s.blitTexture(r,o.colorTexture,9728),r.setStencilTestEnabled(!0)}}e.FeatureEffect=r,Object.defineProperty(e,Symbol.toStringTag,{value:"Module"})});

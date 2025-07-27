@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports"],function(t){"use strict";t.ImmutableDehydratedPoint=class{constructor(t,e,i,s,n){this.spatialReference=t,this._position=void 0!==n?[e,i,s??0,n??0]:void 0!==s?[e,i,s??0]:[e,i],this._flags=(void 0!==s?1:0)+(void 0!==n?2:0)}get hasZ(){return!(1&~this._flags)}get hasM(){return!(2&~this._flags)}get type(){return"point"}get x(){return this._position[0]}get y(){return this._position[1]}get z(){return this.hasZ?this._position[2]:void 0}get m(){return this.hasM?this._position[3]:void 0}},t.makeDehydratedPoint=function(t,e,i,s){return{x:t,y:e,z:i,hasZ:null!=i,hasM:!1,spatialReference:s,type:"point"}},t.setDehydratedPoint=function(t,e,i,s,n){t.x=e,t.y=i,t.z=s,t.hasZ=null!=s,t.spatialReference=n},Object.defineProperty(t,Symbol.toStringTag,{value:"Module"})});

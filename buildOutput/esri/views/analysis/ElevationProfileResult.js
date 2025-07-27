@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["../../chunks/tslib.es6","../../core/Clonable","../../core/accessorSupport/decorators/property","../../core/has","../../core/Logger","../../core/RandomLCG","../../core/accessorSupport/decorators/subclass"],function(e,r,o,t,s,p,a){"use strict";let c=class extends r.Clonable{constructor(e){super(e),this.available=!1,this.error=null,this.progress=0,this.samples=[],this.statistics=null}};return e.__decorate([o.property()],c.prototype,"available",void 0),e.__decorate([o.property()],c.prototype,"error",void 0),e.__decorate([o.property()],c.prototype,"progress",void 0),e.__decorate([o.property()],c.prototype,"samples",void 0),e.__decorate([o.property()],c.prototype,"statistics",void 0),c=e.__decorate([a.subclass("esri.views.analysis.ElevationProfileResult")],c),c});

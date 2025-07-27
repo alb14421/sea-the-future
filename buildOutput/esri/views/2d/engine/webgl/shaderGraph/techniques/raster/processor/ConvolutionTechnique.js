@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports","./BaseRasterProcessorTechnique","../../shaders/raster/processor/ConvolutionShader"],function(e,o,s){"use strict";class n extends o.BaseRasterProcessorTechnique{constructor(){super(...arguments),this.name="RasterConvolutionProcessor",this.type=8,this.shaders={convolution:new s.ConvolutionShader}}_process(e,o){const s=e.rasterFunction.parameters,n={rows:s.kernelRows,cols:s.kernelCols},r={kernel:[...s.kernel],clampRange:s.clampRange},t=this._getCommonConfig(e,o),i={shader:this.shaders.convolution,uniforms:{config:t,convolutionConfig:r},defines:n,optionalAttributes:null,useComputeBuffer:!1},{painter:a,context:u}=e;a.submitDrawMesh(u,i,a.quadMesh)}}e.ConvolutionTechnique=n,Object.defineProperty(e,Symbol.toStringTag,{value:"Module"})});

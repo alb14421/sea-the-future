@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports"],function(e){"use strict";class t{constructor(e,t,s,i,n,o,r,c,u=.5){this.coverage=e,this.density=t,this.absorption=s,this.cloudSize=i,this.detailSize=n,this.smoothness=o,this.cloudHeight=r,this.raymarchingSteps=c,this.median=u}}const s={sunny:new t([0,.6],[.03,.03],[0,0],[.9,.9],[.8,.8],[.7,.7],[.05,.05],0),cloudy:new t([.3,.65],[.2,.4],[0,0],[.85,.85],[.75,.75],[.3,.4],[1,1],2,.6),rainy:new t([.6,.8],[.5,.8],[.1,.5],[.9,.9],[.75,.75],[.5,.5],[1,1],2,.4),snowy:new t([.25,.75],[.3,.3],[0,0],[.95,.95],[.7,.7],[.69,.75],[.3,1],1,.65),foggy:new t([.8,.8],[.5,.5],[0,0],[.95,.95],[.9,.9],[.55,.55],[.3,.3],0)};s.default=s.sunny,e.CloudPreset=t,e.cloudPresets=s,Object.defineProperty(e,Symbol.toStringTag,{value:"Module"})});

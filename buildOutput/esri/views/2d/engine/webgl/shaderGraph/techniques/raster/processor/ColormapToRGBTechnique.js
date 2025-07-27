@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports","./BaseRasterProcessorTechnique","../../shaders/raster/processor/ColormapToRGBShader"],function(e,o,r){"use strict";class s extends o.BaseRasterProcessorTechnique{constructor(){super(...arguments),this.name="RasterColormapToRGBProcessor",this.type=4,this.shaders={colormapToRGB:new r.ColormapToRGBShader}}_process(e,o,r){const s=e.rasterFunction.parameters,t={colormapTexture:{texture:r,unit:1},colormapOffset:s.offset,colormapMaxIndex:s.indexedColormap.length/4-1},a=this._getCommonConfig(e,o),n={shader:this.shaders.colormapToRGB,uniforms:{config:a,colormapConfig:t},defines:{},optionalAttributes:null,useComputeBuffer:!1},{painter:i,context:c}=e;i.submitDrawMesh(c,n,i.quadMesh)}}e.ColormapToRGBTechnique=s,Object.defineProperty(e,Symbol.toStringTag,{value:"Module"})});

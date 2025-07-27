@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports","../../../../core/workers/WorkerHandle"],function(e,r){"use strict";class t extends r.WorkerHandle{constructor(e){super("FlowWorker","generateStreamlines",{generateStreamlines:e=>[e.flowData.data.buffer,e.flowData.mask.buffer],generateTiledStreamlines:e=>{const r=[];return e.flowDataTiles.forEach(e=>{"string"!=typeof e&&r.push(e.data.buffer,e.mask.buffer)}),r}},e,{strategy:"dedicated"})}generateStreamlines(e,r){return this.invokeMethod("generateStreamlines",e,r)}generateTiledStreamlines(e,r){return this.invokeMethod("generateTiledStreamlines",e,r)}}e.FlowWorkerHandle=t,Object.defineProperty(e,Symbol.toStringTag,{value:"Module"})});

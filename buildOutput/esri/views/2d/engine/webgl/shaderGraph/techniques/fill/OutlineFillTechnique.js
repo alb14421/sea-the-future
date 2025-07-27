@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports","../FeatureTechnique","../featureTechniqueUtils","../line/utils","../shaders/OutlineFillShader"],function(e,t,i,s,n){"use strict";class r extends t.FeatureTechnique{constructor(){super(...arguments),this.type=19,this.shaders={geometry:new n.OutlineFillShader}}render(e,t){const{painter:n,pixelRatio:r}=e,a=t.instance.getInput();n.setShader({shader:this.shaders.geometry,uniforms:{...i.resolveDynamicUniforms(e,t.target,a.uniforms),...i.getFeatureUniforms(e,t.target),antialiasingControls:s.getAntialiasingControls(r)},defines:{...i.getSelectionDefines(e)},optionalAttributes:a.optionalAttributes,useComputeBuffer:i.isHittest(e)}),n.setPipelineState(i.getFeaturePipelineState(e)),n.submitDraw(e,t)}}e.OutlineFillTechnique=r,Object.defineProperty(e,Symbol.toStringTag,{value:"Module"})});

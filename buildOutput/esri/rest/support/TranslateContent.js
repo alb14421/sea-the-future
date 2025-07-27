@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports","../../chunks/tslib.es6","../../core/JSONSupport","../../core/accessorSupport/decorators/property","../../core/accessorSupport/decorators/subclass"],function(t,e,r,o,s){"use strict";return t.default=class extends r.JSONSupport{constructor(t){super(t)}},e.__decorate([o.property({type:String,json:{write:!0}})],t.default.prototype,"key",void 0),e.__decorate([o.property({type:String,json:{write:!0}})],t.default.prototype,"text",void 0),t.default=e.__decorate([s.subclass("esri.rest.support.TranslateContent")],t.default),t.default});

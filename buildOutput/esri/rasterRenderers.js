@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports","./core/deprecate","./core/Logger","./renderers/ClassBreaksRenderer","./renderers/FlowRenderer","./renderers/RasterColormapRenderer","./renderers/RasterShadedReliefRenderer","./renderers/RasterStretchRenderer","./renderers/UniqueValueRenderer","./renderers/VectorFieldRenderer"],function(e,r,d,n,s,t,a,o,R,l){"use strict";const i=s,c=n,u=R,p=t,g=o,f=l,m=a;r.deprecatedModule(d.getLogger("esri.rasterRenderers"),"esri.rasterRenderers",{replacement:"Individual raster renderer module imports",version:"4.32",warnOnce:!0}),e.ClassBreaksRenderer=c,e.FlowRenderer=i,e.RasterColormapRenderer=p,e.RasterShadedReliefRenderer=m,e.RasterStretchRenderer=g,e.UniqueValueRenderer=u,e.VectorFieldRenderer=f,e.__exported__=function(){},Object.defineProperty(e,Symbol.toStringTag,{value:"Module"})});

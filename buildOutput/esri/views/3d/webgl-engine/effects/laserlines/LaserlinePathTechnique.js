@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["require","exports","../../../../../core/libs/gl-matrix-2/factories/vec3f64","../../core/shaderTechnique/ReloadableShaderModule","../../core/shaderTechnique/ShaderTechnique","./LaserlineTechnique","../../../../../chunks/LaserlinePath.glsl"],function(e,r,s,a,t,n,i){"use strict";class c extends n.LaserlinePassParameters{constructor(){super(...arguments),this.origin=s.create()}}class l extends t.ShaderTechnique{constructor(r,s){super(r,s,new a.ReloadableShaderModule(i.LaserlinePath,()=>new Promise((r,s)=>e(["../../shaders/LaserlinePath.glsl"],r,s))),o)}}const o=new Map([["start",0],["end",1],["extrude",2],["startUp",3],["endUp",4]]);r.LaserlinePathPassParameters=c,r.LaserlinePathTechnique=l,r.vertexAttributeLocations=o,Object.defineProperty(r,Symbol.toStringTag,{value:"Module"})});

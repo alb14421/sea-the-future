@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports"],function(t){"use strict";t.GLMaterials=class{constructor(t,e){this._material=t,this._repository=e,this._map=new Map}dispose(){this._map.forEach((t,e)=>{null!=t&&this._repository.release(this._material,e)})}load(t,e,s){const r=this._material.produces.get(e);if(!r?.(s))return null;this._map.has(s)||this._map.set(s,this._repository.acquire(this._material,e,s));const i=this._map.get(s);if(i){if(2===i.ensureResources(t))return i;this._repository.requestRender()}return null}},Object.defineProperty(t,Symbol.toStringTag,{value:"Module"})});

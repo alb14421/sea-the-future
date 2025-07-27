@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports","./BaseRasterProcessorTechnique","../../shaders/raster/surface","../../shaders/raster/processor/HillshadeShader"],function(e,s,r,t){"use strict";class a extends s.BaseRasterProcessorTechnique{constructor(){super(...arguments),this.name="RasterHillshadeProcessor",this.type=12,this.shaders={hillshade:new t.HillshadeShader}}_process(e,s){const t=e.rasterFunction.parameters,a={isMultidirectional:t.hillshadeType>0},i=s.getRasterCellSize(),o=r.computeZFactor(t,i),h={...t,factor:o,minValue:0,maxValue:8e3},l=this._getCommonConfig(e,s),n={shader:this.shaders.hillshade,uniforms:{config:l,hillshadeConfig:h},defines:a,optionalAttributes:null,useComputeBuffer:!1},{painter:c,context:u}=e;c.submitDrawMesh(u,n,c.quadMesh)}}e.HillshadeTechnique=a,Object.defineProperty(e,Symbol.toStringTag,{value:"Module"})});

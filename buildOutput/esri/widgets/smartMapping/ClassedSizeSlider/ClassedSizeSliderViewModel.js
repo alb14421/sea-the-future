@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["../../../chunks/tslib.es6","../../../core/accessorSupport/decorators/property","../../../core/has","../../../core/Logger","../../../core/RandomLCG","../../../core/accessorSupport/decorators/subclass","../SmartMappingSliderViewModel"],function(e,r,s,o,t,a,c){"use strict";let d=class extends c{set breaks(e){super.breaks=e}constructor(e){super(e),this.zoomingEnabled=!1}};return e.__decorate([r.property({readOnly:!0})],d.prototype,"zoomingEnabled",void 0),d=e.__decorate([a.subclass("esri.widgets.smartMapping.ClassedSizeSlider.ClassedSizeSliderViewModel")],d),d});

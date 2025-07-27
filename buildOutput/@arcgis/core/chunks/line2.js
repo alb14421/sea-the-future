@@ -1,0 +1,5 @@
+/*
+All material copyright ESRI, All Rights Reserved, unless otherwise specified.
+See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+*/
+import{p as o}from"./projectBuffer.js";import{n,d as t}from"./DoubleArray.js";import{r as e}from"./triangulationUtils.js";import{a as s}from"./ElevationContext.js";import{d as i}from"./RenderGeometry.js";function r(o,t,i,r){const p="polygon"===o.type?1:0,l="polygon"===o.type?o.rings:o.paths,{position:c,outlines:u}=e(l,!!o.hasZ,p,o.spatialReference),f=n(c.length),m=s(c,o.spatialReference,0,f,0,c,0,c.length/3,t,i,r),g=null!=m;return{lines:g?a(u,c,f):[],projectionSuccess:g,sampledElevation:m}}function p(n,t){const s="polygon"===n.type?1:0,r="polygon"===n.type?n.rings:n.paths,{position:p,outlines:l}=e(r,!1,s),c=o(p,n.spatialReference,0,p,t,0);for(let o=2;o<p.length;o+=3)p[o]=i;return{lines:c?a(l,p):[],projectionSuccess:c}}function a(o,n,e=null){const s=new Array;for(const{index:i,count:r}of o){if(r<=1)continue;const o=3*i,p=3*r;s.push({position:t(n,3*i,3*r),mapPositions:null!=e?t(e,o,p):void 0})}return s}export{r as a,p as g};

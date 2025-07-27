@@ -1,0 +1,5 @@
+/*
+All material copyright ESRI, All Rights Reserved, unless otherwise specified.
+See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+*/
+import{clone as t}from"./lang.js";import{L as s}from"../chunks/Logger.js";import{g as e}from"../chunks/object.js";import"../config.js";import"../chunks/string.js";class r{constructor(t,s,r=void 0){var i;this.name=t,this.details=r,this.message=(s&&(i=r,s.replaceAll(/\$\{([^\s:}]*)(?::([^\s:}]+))?\}/g,(t,s)=>""===s?"$":(e(s,i)??"").toString())))??""}toString(){return"["+this.name+"]: "+this.message}}class i extends r{constructor(t,s,e){super(t,s,e)}toJSON(){if(null!=this.details)try{return{name:this.name,message:this.message,details:JSON.parse(JSON.stringify(this.details,(s,e)=>{if(e&&"object"==typeof e&&"function"==typeof e.toJSON)return e;try{return t(e)}catch(t){return"[object]"}}))}}catch(t){throw s.getLogger("esri.core.Error").error(t),t}return{name:this.name,message:this.message,details:this.details}}static fromJSON(t){return new i(t.name,t.message,t.details)}}i.prototype.type="error";export{r as M,i as default};

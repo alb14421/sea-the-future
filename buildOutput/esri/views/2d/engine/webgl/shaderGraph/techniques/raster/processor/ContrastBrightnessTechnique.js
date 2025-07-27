@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports","./BaseRasterProcessorTechnique","../../shaders/raster/processor/ContrastBrightnessShader"],function(s,e,t){"use strict";class r extends e.BaseRasterProcessorTechnique{constructor(){super(...arguments),this.name="RasterContrastBrightnessProcessor",this.type=7,this.shaders={contrastBrightness:new t.ContrastBrightnessShader}}_process(s,e){const t=this._getCommonConfig(s,e),r=s.rasterFunction.parameters,n={shader:this.shaders.contrastBrightness,uniforms:{config:t,contrastBrightnessConfig:r},defines:{},optionalAttributes:null,useComputeBuffer:!1},{painter:o,context:a}=s;o.submitDrawMesh(a,n,o.quadMesh)}}s.ContrastBrightnessTechnique=r,Object.defineProperty(s,Symbol.toStringTag,{value:"Module"})});

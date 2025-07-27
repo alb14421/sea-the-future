@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports","../../../../interactive/editGeometry/EditGeometryOperations","../../../../interactive/editGeometry/operations/UpdateVertices"],function(t,e,i){"use strict";class o extends e.EditGeometryOperations{constructor(t,e,i){super(t,e),this._updateControlPoints=i,this.editSourcePoints=!1}updateVertices(t,e,i=1){return this._apply(new s(this.data,t,e,this.editSourcePoints,this._updateControlPoints),i)}}class s extends i.UpdateVertices{constructor(t,e,i,o,s){super(t,e,i),this._editSourcePoints=o,this._updateControlPoints=s}_notifyChanges(t){super._notifyChanges(t),this._updateControlPoints(this._editSourcePoints)}canAccumulate(t){return this._editSourcePoints===t._editSourcePoints&&super.canAccumulate(t)}}t.ControlPointOperations=o,Object.defineProperty(t,Symbol.toStringTag,{value:"Module"})});

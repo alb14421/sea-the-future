@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports"],function(t){"use strict";function e(t,e){return t?.type===e}t.differentValuesString="esri_BatchAttributeForm_different_values",t.isFieldInput=function(t){return"field"===t.type},t.isFieldInputWithShowNoValueOptionInput=t=>null!=t&&(e(t,"combo-box")||e(t,"radio-buttons")),t.isGroupInput=function(t){return"group"===t.type},t.isInputWithInputType=e,t.makeUseId=function(t,e){return`${t}:${e}`},t.visibilityCodeToBoolean=function(t){return"visible"===t},Object.defineProperty(t,Symbol.toStringTag,{value:"Module"})});

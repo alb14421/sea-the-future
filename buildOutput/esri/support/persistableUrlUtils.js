@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports","../kernel","../core/urlUtils","../portal/support/urlUtils","../chunks/persistableUrlUtils"],function(e,r,o,l,i){"use strict";e.ensureMainOnlineDomain=i.ensureMainOnlineDomain,e.fromCDNUrl=i.fromCDNUrl,e.fromJSON=i.fromJSON,e.itemIdFromResourceUrl=i.itemIdFromResourceUrl,e.prefixAndFilenameFromResourceUrl=i.prefixAndFilenameFromResourceUrl,e.read=i.read,e.toCDNUrl=i.toCDNUrl,e.toJSON=i.toJSON,e.write=i.write,Object.defineProperty(e,Symbol.toStringTag,{value:"Module"})});

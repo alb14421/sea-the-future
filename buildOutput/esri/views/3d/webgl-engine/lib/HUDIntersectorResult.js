@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports","../../../../core/libs/gl-matrix-2/factories/vec3f64","./IntersectorResult","./ObjectTarget"],function(e,t,r,s){"use strict";class c extends r.IntersectorResult{constructor(){super(...arguments),this.intersector=1}}class n extends s.ObjectTarget{constructor(e,r){super(e.object,e.geometryId,e.primitiveIndex),this.center=t.clone(r)}}e.HUDIntersectorResult=c,e.HUDTarget=n,e.isHUDIntersectorResult=function(e){return r.isValidIntersectorResult(e)&&1===e.intersector&&!!e.target&&"center"in e.target},Object.defineProperty(e,Symbol.toStringTag,{value:"Module"})});

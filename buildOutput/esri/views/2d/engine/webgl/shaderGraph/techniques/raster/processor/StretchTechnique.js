@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports","./BaseRasterProcessorTechnique","../../shaders/raster/processor/StretchShader"],function(e,t,s){"use strict";class r extends t.BaseRasterProcessorTechnique{constructor(){super(...arguments),this.name="RasterStretchProcessor",this.type=21,this.shaders={stretch:new s.StretchShader}}_process(e,t){const s=e.rasterFunction.parameters,r={isMultiband:s.bandCount>1,isOutputRounded:s.isOutputRounded,useGamma:s.useGamma},o=this._getCommonConfig(e,t),n={shader:this.shaders.stretch,uniforms:{config:o,stretchConfig:s},defines:r,optionalAttributes:null,useComputeBuffer:!1},{painter:a,context:u}=e;a.submitDrawMesh(u,n,a.quadMesh)}}e.StretchTechnique=r,Object.defineProperty(e,Symbol.toStringTag,{value:"Module"})});

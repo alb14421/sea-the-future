@@ -1,0 +1,8 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports","../views/3d/webgl-engine/core/shaderLibrary/ScreenSpacePass.glsl","../views/3d/webgl-engine/core/shaderLibrary/output/ReadDepth.glsl","../views/3d/webgl-engine/core/shaderLibrary/util/RgbaFloatEncoding.glsl","../views/3d/webgl-engine/core/shaderModules/Float2BindUniform","../views/3d/webgl-engine/core/shaderModules/FloatPassUniform","../views/3d/webgl-engine/core/shaderModules/glsl","../views/3d/webgl-engine/core/shaderModules/Texture2DPassUniform","../views/webgl/NoParameters","../views/webgl/ShaderBuilder"],function(e,r,a,n,o,s,t,i,l,d){"use strict";class g extends l.NoParameters{constructor(){super(...arguments),this.opacity=1}}function c(e){const l=new d.ShaderBuilder;l.include(r.ScreenSpacePass),l.fragment.uniforms.add(new i.Texture2DPassUniform("tex",e=>e.texture)),e.hasOpacityFactor&&l.fragment.uniforms.add(new s.FloatPassUniform("opacity",e=>e.opacity));const g=3===e.blitMode;return g&&(l.fragment.uniforms.add(new o.Float2BindUniform("nearFar",e=>e.camera.nearFar)),l.fragment.include(a.ReadDepth),l.fragment.include(n.RgbaFloatEncoding)),l.fragment.main.add(t.glsl`
+    ${g?t.glsl`
+          float normalizedLinearDepth = (-linearDepthFromTexture(tex, uv) - nearFar[0]) / (nearFar[1] - nearFar[0]);
+          fragColor = float2rgba(normalizedLinearDepth);`:t.glsl`
+          fragColor = texture(tex, uv) ${e.hasOpacityFactor?"* opacity":""};`}`),l}const u=Object.freeze(Object.defineProperty({__proto__:null,CompositingPassParameters:g,build:c},Symbol.toStringTag,{value:"Module"}));e.Compositing=u,e.CompositingPassParameters=g,e.build=c});

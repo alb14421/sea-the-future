@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["require","exports","../../core/shaderTechnique/ReloadableShaderModule","../../core/shaderTechnique/ShaderTechnique","../../lib/DefaultVertexBufferLayouts","../../../../../chunks/BlendWeights.glsl","../../../../webgl/renderState"],function(e,r,i,t,l,n,o){"use strict";class s extends t.ShaderTechnique{constructor(r,t){super(r,t,new i.ReloadableShaderModule(n.BlendWeights,()=>new Promise((r,i)=>e(["../../shaders/BlendWeights.glsl"],r,i))),l.Pos2Locations)}initializePipeline(){return o.makePipelineState({colorWrite:o.defaultColorWrite})}}r.SMAABlendWeightsTechnique=s,Object.defineProperty(r,Symbol.toStringTag,{value:"Module"})});

@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports","../FeatureTechnique","../featureTechniqueUtils","../shaders/GradientFillShader"],function(e,t,i,r){"use strict";class s extends t.FeatureTechnique{constructor(){super(...arguments),this.type=10,this.shaders={geometry:new r.GradientFillShader},this.symbologyPlane=0}render(e,t){const{context:r,painter:s}=e,n=t.instance.getInput();s.setShader({shader:this.shaders.geometry,uniforms:{...i.resolveDynamicUniforms(e,t.target,n.uniforms),...i.getFeatureUniforms(e,t.target),mosaicInfo:s.textureManager.getMosaicInfo(r,t.textureKey)},defines:{...i.getSelectionDefines(e)},optionalAttributes:n.optionalAttributes,useComputeBuffer:i.isHittest(e)}),s.setPipelineState(i.getFeaturePipelineState(e)),s.submitDraw(e,t)}}e.GradientFillTechnique=s,Object.defineProperty(e,Symbol.toStringTag,{value:"Module"})});

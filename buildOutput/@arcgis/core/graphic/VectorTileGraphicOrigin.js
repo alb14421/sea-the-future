@@ -1,0 +1,5 @@
+/*
+All material copyright ESRI, All Rights Reserved, unless otherwise specified.
+See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+*/
+import s from"./GraphicOrigin.js";import{a as r}from"../chunks/isVectorTileGraphicOrigin.js";import"../chunks/tslib.es6.js";import"../chunks/Logger.js";import"../config.js";import"../core/lang.js";import"../chunks/object.js";import"../chunks/string.js";import"../core/Error.js";import"../core/accessorSupport/decorators/subclass.js";import"../chunks/Lifecycle.js";import"../chunks/metadata.js";import"../chunks/utils.js";import"../chunks/handleUtils.js";import"../chunks/tracking.js";import"../chunks/ensureType.js";import"../chunks/MapUtils.js";import"../chunks/Warning.js";var t;class i extends s{static{t=r}constructor(s,r,i){super(),this[t]=!0,this.type="vector-tile",this.layer=s,this.layerId=r,this.layerIndex=i}}export{i as default};

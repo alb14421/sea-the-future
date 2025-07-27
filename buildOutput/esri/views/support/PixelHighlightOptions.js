@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports","../../chunks/tslib.es6","../../Color","../../core/JSONSupport","../../core/accessorSupport/decorators/property","../../core/has","../../core/Logger","../../core/RandomLCG","../../core/accessorSupport/decorators/subclass","./HighlightDefaults"],function(e,o,r,t,s,p,c,l,a,u){"use strict";return e.default=class extends t.JSONSupport{constructor(e){super(e),this.color=u.defaultColor.clone()}},o.__decorate([s.property({type:r,nonNullable:!0,json:{write:!0}})],e.default.prototype,"color",void 0),o.__decorate([s.property({nonNullable:!0,json:{write:!0}})],e.default.prototype,"ranges",void 0),o.__decorate([s.property({json:{write:!0}})],e.default.prototype,"bandId",void 0),e.default=o.__decorate([a.subclass("esri.views.support.PixelHighlightOptions")],e.default),e.default});

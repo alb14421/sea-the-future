@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports"],function(o){"use strict";const t=(o,t,e,n)=>{let i=t,r=t;const l=e>>>1,c=o[i-1];for(;r<=l;){r=i<<1,r<e&&n(o[r-1],o[r])<0&&++r;const t=o[r-1];if(n(t,c)<=0)break;o[i-1]=t,i=r}o[i-1]=c},e=(o,t)=>o<t?-1:o>t?1:0;o.iterableSort=function*(o,n,i,r){void 0===n&&(n=0),void 0===i&&(i=o.length),void 0===r&&(r=e);for(let e=i>>>1;e>n;e--)t(o,e,i,r),yield;const l=n+1;for(let e=i-1;e>n;e--){const i=o[n];o[n]=o[e],o[e]=i,t(o,l,e,r),yield}},o.sort=function(o,n,i,r){void 0===n&&(n=0),void 0===i&&(i=o.length),void 0===r&&(r=e);for(let e=i>>>1;e>n;e--)t(o,e,i,r);const l=n+1;for(let e=i-1;e>n;e--){const i=o[n];o[n]=o[e],o[e]=i,t(o,l,e,r)}},Object.defineProperty(o,Symbol.toStringTag,{value:"Module"})});

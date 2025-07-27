@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports"],function(e){"use strict";e.makeMaterialParameters=function(e={}){return{color:[1,1,1],opacity:1,alphaMode:"OPAQUE",alphaCutoff:.5,doubleSided:!1,castShadows:!0,receiveShadows:!0,receiveAmbientOcclusion:!0,colorTexture:null,normalTexture:null,occlusionTexture:null,emissiveTexture:null,metallicRoughnessTexture:null,colorTextureTransform:null,normalTextureTransform:null,occlusionTextureTransform:null,emissiveTextureTransform:null,metallicRoughnessTextureTransform:null,emissiveFactor:[0,0,0],metallicFactor:1,roughnessFactor:1,colorMixMode:"multiply",...e}},e.makeTextureSource=function(e,r={}){return{data:e,parameters:{wrap:{s:10497,t:10497,...r.wrap},noUnpackFlip:!0,mipmap:!1,...r}}},Object.defineProperty(e,Symbol.toStringTag,{value:"Module"})});

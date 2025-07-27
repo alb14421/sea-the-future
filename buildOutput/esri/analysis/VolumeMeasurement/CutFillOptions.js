@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["../../chunks/tslib.es6","../../core/Clonable","../../core/JSONSupport","../../core/accessorSupport/decorators/property","../../core/has","../../core/Logger","../../core/RandomLCG","../../core/accessorSupport/decorators/subclass"],function(e,r,o,t,s,c,a,l){"use strict";let n=class extends(o.JSONSupportMixin(r.Clonable)){constructor(e){super(e),this.targetElevation=null}};return e.__decorate([t.property({type:Number})],n.prototype,"targetElevation",void 0),n=e.__decorate([l.subclass("esri.analysis.VolumeMeasurement.CutFillOptions")],n),n});

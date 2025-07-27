@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["../../chunks/tslib.es6","../../core/JSONSupport","../../core/accessorSupport/decorators/property","../../core/has","../../core/Logger","../../core/RandomLCG","../../core/accessorSupport/decorators/subclass"],function(e,o,t,r,s,c,p){"use strict";let i=class extends o.JSONSupport{constructor(e){super(e),this.type="location",this.latitudeFieldName=null,this.longitudeFieldName=null}};return e.__decorate([t.property({type:["location"],readOnly:!0,json:{write:!0}})],i.prototype,"type",void 0),e.__decorate([t.property({json:{write:!0}})],i.prototype,"latitudeFieldName",void 0),e.__decorate([t.property({json:{write:!0}})],i.prototype,"longitudeFieldName",void 0),i=e.__decorate([p.subclass("esri.layers.support.ParquetEncodingLocation")],i),i});

@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports","../../../../core/time","../../webgl/RenderCamera","./BindParameters"],function(e,t,i,s){"use strict";e.RenderContext=class{constructor(e,n,r){this.rctx=e,this.techniques=r,this.lastFrameCamera=new i,this.output=0,this.renderOccludedMask=13,this.time=t.Milliseconds(0),this.bind=new s.BindParameters(n),this.bind.alignPixelEnabled=!0}},e.defaultRenderOccludedMask=13,Object.defineProperty(e,Symbol.toStringTag,{value:"Module"})});

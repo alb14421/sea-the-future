@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports","./operations/AppendVertex","./operations/UpdateVertices","./operations/RemoveVertices","./operations/SplitSegment","./operations/SetVertexPosition","./operations/ClosePart"],function(e,t,o,i,r,s,n){"use strict";e.AppendVertex=t.AppendVertex,e.UpdateVertices=o.UpdateVertices,e.RemoveVertices=i.RemoveVertices,e.SplitSegment=r.SplitSegment,e.SetVertexPosition=s.SetVertexPosition,e.ClosePart=n.ClosePart,Object.defineProperty(e,Symbol.toStringTag,{value:"Module"})});

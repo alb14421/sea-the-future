@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports","./support/builderUtils","./support/offsetUtils","./support/shapeUtils","../support/executorUtils"],function(e,t,s,r,o){"use strict";e.execute=function({templatePart:e,shape:i,edits:a,relationships:n,mode:f}){let l=[];if("radial"===i.type)l=r.convertRadialToPolylines(i);else{if(!o.isPolyline(i))return;l=[i]}const{builderConfig:p}=e,d=t.readOffsetDistance(p),c=t.readIsProportional(p),u=t.readVertexBeforeOffset(p),P=-1*t.readDistance(p,c);for(const t of l)s.vertexOffsetFromStartOrEndOfLine({templatePart:e,edits:a,relationships:n,shape:t,distance:P,isProportional:c,offsetDistance:d,vertexBeforeOffset:u,vertexPlacement:5,mode:f})},e.isAsync=!1,Object.defineProperty(e,Symbol.toStringTag,{value:"Module"})});

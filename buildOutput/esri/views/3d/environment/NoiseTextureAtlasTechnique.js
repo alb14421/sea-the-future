@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["require","exports","../../../chunks/NoiseTextureAtlas.glsl","../webgl-engine/core/shaderTechnique/ReloadableShaderModule","../webgl-engine/core/shaderTechnique/ShaderTechnique","../webgl-engine/lib/DefaultVertexBufferLayouts","../../webgl/renderState"],function(e,r,t,i,l,n,o){"use strict";class a extends l.ShaderTechnique{constructor(r,l){super(r,l,new i.ReloadableShaderModule(t.NoiseTextureAtlas,()=>new Promise((r,t)=>e(["./NoiseTextureAtlas.glsl"],r,t))),n.Pos2Locations)}initializePipeline(e){return o.makePipelineState({blending:0===e.mode?o.copySource:o.separateBlendingParams(0,1,1,0),depthTest:{func:519},colorWrite:o.defaultColorWrite})}}r.NoiseTextureAtlasTechnique=a,Object.defineProperty(r,Symbol.toStringTag,{value:"Module"})});

@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["../../../chunks/tslib.es6","../../../core/Logger","../../../core/has","../../../core/RandomLCG","../../../core/Error","../../../core/accessorSupport/decorators/subclass","../SmartMappingPrimaryHandleSliderViewModel"],function(e,r,s,o,t,c,a){"use strict";let l=class extends a{constructor(e){super(e)}set stops(e){super.stops=e}getStopInfo(){const{min:e,max:r,stops:s}=this;return s?.length?s.map(s=>({color:s.color,offset:(r-s.value)/(r-e)})):[]}};return l=e.__decorate([c.subclass("esri.widgets.smartMapping.ColorSlider.ColorSliderViewModel")],l),l});

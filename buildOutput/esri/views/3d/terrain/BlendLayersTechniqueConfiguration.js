@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports","../../../chunks/tslib.es6","./TileBlendTechniqueConfiguration","../webgl-engine/core/shaderTechnique/ShaderTechniqueConfiguration"],function(e,n,i,o){"use strict";class r extends i.TileBlendTechniqueConfiguration{constructor(){super(...arguments),this.background=0}}n.__decorate([o.parameter({count:2})],r.prototype,"background",void 0),e.BlendLayersTechniqueConfiguration=r,Object.defineProperty(e,Symbol.toStringTag,{value:"Module"})});

@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports","./core/deprecate","./core/Logger","./geometry/Extent","./geometry/Multipoint","./geometry/Point","./geometry/Polygon","./geometry/Polyline","./geometry/SpatialReference"],function(e,t,o,r,n,i,g,l,y){"use strict";const c=y,m=r,a=n,d=i,p=g,u=l;t.deprecatedModule(o.getLogger("esri.geometry"),"esri.geometry",{replacement:"Individual geometry module imports",version:"4.32",warnOnce:!0}),e.Extent=m,e.Multipoint=a,e.Point=d,e.Polygon=p,e.Polyline=u,e.SpatialReference=c,e.__exported__=function(){},Object.defineProperty(e,Symbol.toStringTag,{value:"Module"})});

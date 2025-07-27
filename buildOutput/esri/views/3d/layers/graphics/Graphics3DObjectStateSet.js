@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports","../../webgl-engine/lib/Object3DStateSet"],function(t,e){"use strict";class s{constructor(t){this.objectIdField=t,this.ids=new Set,this.paused=!1}hasGraphic(t){const e=this.objectIdField?t.graphic.attributes[this.objectIdField]:t.graphic.uid;return this.ids.has(e)}}t.Graphics3DObjectHighlightStateSet=class extends s{constructor(t,s){super(s),this.highlightName=t,this.stateType=0,this.objectStateSet=new e.Object3DHighlightStateSet(t)}},t.Graphics3DOccludeeStateSet=class extends s{constructor(t){super(t),this.stateType=1,this.objectStateSet=new e.Object3DOccludeeStateSet}},Object.defineProperty(t,Symbol.toStringTag,{value:"Module"})});

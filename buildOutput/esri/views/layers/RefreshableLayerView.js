@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports","../../chunks/tslib.es6","../../core/Logger","../../core/promiseUtils","../../core/reactiveUtils","../../core/has","../../core/RandomLCG","../../core/Error","../../core/accessorSupport/decorators/subclass"],function(e,r,s,o,t,a,i,c,l){"use strict";e.RefreshableLayerView=e=>{const a=e;let i=class extends a{initialize(){this.addHandles(t.on(()=>this.layer,"refresh",e=>{this.doRefresh(e.dataChanged).catch(e=>{o.isAbortError(e)||s.getLogger(this).error(e)})}),"RefreshableLayerView")}};return i=r.__decorate([l.subclass("esri.views.layers.RefreshableLayerView")],i),i},Object.defineProperty(e,Symbol.toStringTag,{value:"Module"})});

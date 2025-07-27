@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports","../../../../Color"],function(o,t){"use strict";const e=new t("black"),i=new class{constructor(){this.geometryOutlineWidth=1.5,this.targetGeometryOutlineColor=new t("grey"),this.cutColor=new t([153,198,111,.9]),this.fillColor=new t([200,200,230,.8]),this.cutProjectionLineColor=t.blendColors(this.cutColor,e,.4),this.fillProjectionLineColor=t.blendColors(this.fillColor,e,.4),this.projectionLineWidth=2,this.projectionLineStippleSize=4}};o.cutFillConfiguration=i,Object.defineProperty(o,Symbol.toStringTag,{value:"Module"})});

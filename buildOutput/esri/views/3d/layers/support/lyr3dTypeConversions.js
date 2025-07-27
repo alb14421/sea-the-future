@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports","../../../webgl/enums"],function(e,t){"use strict";const n={Points:null,Lines:null,LineStrip:null,Triangles:t.PrimitiveType.TRIANGLES,TriangleStrip:t.PrimitiveType.TRIANGLE_STRIP,NotSet:null};e.alphaModeConversion={Opaque:1,Mask:2,Blend:0},e.faceCullingConversion={Back:2,Front:1,None:0,NotSet:2},e.lyr3DTypeToByteSize={U8:1,I8:1,U16:2,I16:2,U32:4,I32:4,F32:4,F64:8,Utf8String:1,NotSet:1},e.primTypeConversion=n,e.wrapModeConversion={WrapYBit:{s:33071,t:10497},WrapXBit:{s:10497,t:33071},WrapXy:{s:10497,t:10497},None:{s:33071,t:33071},NotSet:{s:33071,t:33071}},Object.defineProperty(e,Symbol.toStringTag,{value:"Module"})});

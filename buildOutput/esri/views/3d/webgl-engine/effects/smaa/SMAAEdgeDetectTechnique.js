@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["require","exports","../../core/shaderTechnique/ReloadableShaderModule","../../core/shaderTechnique/ShaderTechnique","../../lib/DefaultVertexBufferLayouts","../../../../../chunks/EdgeDetect.glsl","../../../../webgl/renderState"],function(e,t,r,i,l,o,a){"use strict";class d extends i.ShaderTechnique{constructor(t,i){super(t,i,new r.ReloadableShaderModule(o.EdgeDetect,()=>new Promise((t,r)=>e(["../../shaders/EdgeDetect.glsl"],t,r))),l.Pos2Locations)}initializePipeline(){return a.makePipelineState({colorWrite:a.defaultColorWrite})}}t.SMAAEdgeDetectTechnique=d,Object.defineProperty(t,Symbol.toStringTag,{value:"Module"})});

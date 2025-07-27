@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports","../../../../chunks/vec32","../../../../core/libs/gl-matrix-2/factories/vec3f64","../intersectionUtils"],function(e,t,n,r){"use strict";const o=n.create(),i=n.create();e.applySurfaceCollisionConstraint=function(e,n,c=0){const s=e.state.constraints;if(!s.collision.enabled)return!1;const l=r.surfaceElevationBelowRenderLocation(e,n.eye),a=e.renderCoordsHelper.getAltitude(n.eye),u=l+s.collision.elevationMargin;if(a>=u)return!1;const d=t.length(n.eye);if(t.subtract(o,n.center,n.eye),n.eye=e.renderCoordsHelper.setAltitude(i,u,n.eye),1===c)n.center=t.add(o,n.eye,o);else if(2===c){const e=(d-a+u)/d;n.center=t.scale(o,n.center,e)}return!0},Object.defineProperty(e,Symbol.toStringTag,{value:"Module"})});

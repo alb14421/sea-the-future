@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["require","exports","../../../chunks/Clouds.glsl","../webgl-engine/core/shaderTechnique/ReloadableShaderModule","../webgl-engine/core/shaderTechnique/ShaderTechnique","../webgl-engine/lib/DefaultVertexBufferLayouts","../../webgl/renderState"],function(e,l,n,r,i,t,o){"use strict";class u extends i.ShaderTechnique{constructor(l,i){super(l,i,new r.ReloadableShaderModule(n.Clouds,()=>new Promise((l,n)=>e(["./Clouds.glsl"],l,n))),t.Pos2Locations)}initializePipeline(e){return o.makePipelineState({blending:o.simpleBlendingParams(32769,32770,32774,0===e.writeTextureChannels?[1,1,0,0]:[0,0,1,1]),depthTest:{func:515},colorWrite:o.defaultColorWrite})}}l.CloudsTechnique=u,Object.defineProperty(l,Symbol.toStringTag,{value:"Module"})});

@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports","./executionError"],function(t,e){"use strict";function r(t){return t.toLowerCase().replaceAll(/[\s-]+/g,"")}t.StringEnum=class{constructor(t,e){const o=new Map;for(const e of t){const t=r(e);if(o.has(t))throw new Error(`${e} already added as ${o.get(t)}`);o.set(t,e)}if(null!=e)for(const[t,n]of e){const e=r(t);if(o.has(e))throw new Error(`${t} already associated with ${o.get(e)}`);o.set(e,n)}this._enumMap=o}lookup(t){return this._enumMap.get(r(t))}get(t){const r=this.lookup(t);if(null==r)throw new e.ArcadeExecutionError(null,"InvalidParameter",null);return r}},t.toStringEnumKey=r,Object.defineProperty(t,Symbol.toStringTag,{value:"Module"})});

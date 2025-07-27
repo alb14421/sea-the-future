@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports","../../sketch/constraints","./FeatureSnappingCandidate","../hints/LineSnappingHint"],function(n,t,e,i){"use strict";class a extends e.FeatureSnappingCandidate{constructor(n){super({...n,constraint:new t.LineConstraint(n.edgeStart,n.edgeEnd)})}get hints(){return[new i.LineSnappingHint(1,this.constraint.start,this.constraint.end,this.isDraped,this.domain)]}}n.EdgeSnappingCandidate=a,Object.defineProperty(n,Symbol.toStringTag,{value:"Module"})});

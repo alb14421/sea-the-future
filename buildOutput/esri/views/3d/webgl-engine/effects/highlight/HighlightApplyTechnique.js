@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["require","exports","../../core/shaderTechnique/ReloadableShaderModule","../../core/shaderTechnique/ShaderTechnique","../../lib/DefaultVertexBufferLayouts","../../../../../chunks/HighlightApply.glsl","../../../../webgl/renderState","../../../../webgl/VertexAttributeLocations"],function(e,l,i,r,t,o,a,u){"use strict";class n extends r.ShaderTechnique{constructor(l,r){super(l,r,new i.ReloadableShaderModule(o.HighlightApply,()=>new Promise((l,i)=>e(["../../shaders/HighlightApply.glsl"],l,i))),u.fromLayout(t.NoVertex))}initializePipeline(){return a.makePipelineState({blending:a.unpremultipliedAlphaToPremultipliedAlpha,colorWrite:a.defaultColorWrite})}}l.HighlightApplyTechnique=n,Object.defineProperty(l,Symbol.toStringTag,{value:"Module"})});

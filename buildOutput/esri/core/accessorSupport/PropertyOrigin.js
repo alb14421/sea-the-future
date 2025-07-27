@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports"],function(e){"use strict";function r(e){switch(e){case"defaults":return 0;case"service":return 2;case"portal-item":return 3;case"web-scene":return 4;case"web-map":return 5;case"link-chart":return 6;case"user":return 7;default:return null}}function t(e){switch(e){case 0:return"defaults";case 2:return"service";case 3:return"portal-item";case 4:return"web-scene";case 5:return"web-map";case 6:return"link-chart";case 7:return"user"}}e.idToName=t,e.idToReadableName=function(e){return t(e)},e.idToWritableName=function(e){return t(e)},e.nameToId=r,e.originIdNum=8,e.readableNameToId=function(e){return r(e)},e.writableNameToId=function(e){return r(e)},Object.defineProperty(e,Symbol.toStringTag,{value:"Module"})});

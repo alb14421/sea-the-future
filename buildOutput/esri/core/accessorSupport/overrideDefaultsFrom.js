@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports","../Accessor","./utils"],function(t,e,o){"use strict";t.overrideDefaultsFrom=function t(n,i){const r=o.getProperties(n),s=o.getProperties(i),c=r.store,f=s.store,a=s.metadata;for(const o in a){const i=a[o],r=c.originOf(o),s=f.originOf(o);if(!i.readOnly&&0!==s){if(0!==r){const n=c.get(o),i=f.get(o);n&&i&&i instanceof e&&n instanceof e&&n instanceof i.constructor&&t(n,i);continue}n.set(o,f.get(o))}}},Object.defineProperty(t,Symbol.toStringTag,{value:"Module"})});

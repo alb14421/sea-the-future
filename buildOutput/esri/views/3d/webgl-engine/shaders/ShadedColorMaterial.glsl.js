@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports","../../../../core/libs/gl-matrix-2/factories/vec4f64","../core/shaderLibrary/ScreenSizeScaling.glsl","../core/shaderLibrary/Slice.glsl","../core/shaderLibrary/Transform.glsl","../core/shaderLibrary/shading/TerrainDepthTest.glsl","../core/shaderLibrary/util/ColorConversion.glsl","../core/shaderLibrary/util/View.glsl","../core/shaderModules/Float3PassUniform","../core/shaderModules/Float4PassUniform","../core/shaderModules/glsl","./OutputColorHighlightOID.glsl","../../../webgl/ShaderBuilder","../../../../chunks/ShadedColorMaterial.glsl"],function(r,e,l,s,o,a,i,d,t,c,g,h,n,u){"use strict";r.build=u.build,Object.defineProperty(r,Symbol.toStringTag,{value:"Module"})});

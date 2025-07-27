@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports","../../../core/workers/WorkerHandle"],function(e,r){"use strict";class t extends r.WorkerHandle{constructor(e){super("GaussianSplatSortWorker","sortCentersRelativeToCamera",{sortCentersRelativeToCamera:e=>[e.gaussianCenters.buffer,e.sortOrder.buffer]},e)}sortCentersRelativeToCamera(e,r){return this.invokeMethod("sortCentersRelativeToCamera",e,r)}async destroyWorkerAndSelf(){await this.broadcast({},"destroy"),this.destroy()}}e.GaussianSplatSortWorkerHandle=t,Object.defineProperty(e,Symbol.toStringTag,{value:"Module"})});

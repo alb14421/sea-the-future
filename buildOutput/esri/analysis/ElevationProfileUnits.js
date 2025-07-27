@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["../chunks/tslib.es6","../core/Clonable","../core/accessorSupport/decorators/property","../core/has","../core/Logger","../core/RandomLCG","../core/accessorSupport/decorators/subclass"],function(e,o,t,s,r,c,a){"use strict";let i=class extends o.Clonable{constructor(e){super(e),this.distance=null,this.elevation=null}equals(e){return this===e||this.distance===e.distance&&this.elevation===e.elevation}};return e.__decorate([t.property()],i.prototype,"distance",void 0),e.__decorate([t.property()],i.prototype,"elevation",void 0),i=e.__decorate([a.subclass("esri.analysis.ElevationProfileUnits")],i),i});

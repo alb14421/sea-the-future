@@ -1,0 +1,5 @@
+/*
+All material copyright ESRI, All Rights Reserved, unless otherwise specified.
+See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+*/
+import e from"../core/Error.js";import{h as n}from"../core/lang.js";function i(e){return e&&"function"==typeof e.highlight}function r(e){return e&&"function"==typeof e.maskOccludee}function t(e,n,i){return null==e||e>=i&&(0===n||e<=n)}function a(e,n){if(n&&e){const{minScale:i,maxScale:r}=e;if(c(i,r))return t(n,i,r)}return!0}function c(e,n){return null!=e&&e>0||null!=n&&n>0}function u(e){return!e?.minScale||!e.maxScale||e.minScale>=e.maxScale}const o=()=>!n("disable-feature:layer-based-scale-visibility");function l(e){return null!=e&&"object"==typeof e&&"createQuery"in e&&"queryFeatures"in e&&"layer"in e&&"view"in e}function s(n,i,r){return new e("layerview:spatial-reference-incompatible",`The spatial reference of this ${n} (wkid: ${i??"undefined"}) is incompatible with the spatial reference of the view (wkid: ${r??"undefined"}).`,{})}export{o as a,c as b,a as c,t as d,i as h,l as i,r as o,s,u as v};

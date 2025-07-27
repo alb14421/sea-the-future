@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports","../../support/buffer/InterleavedLayout"],function(o,e){"use strict";const t=e.newLayout().vec3f("position").freeze(),i=e.newLayout().vec3f("position").vec2f16("uv0").freeze(),u=e.newLayout().vec3f("position").vec4u8("color").freeze(),n=e.newLayout().vec3f("position").vec2f16("uv0").vec4u8("olidColor").freeze(),f=e.newLayout().vec3f("position").vec2f("uv0").freeze(),v=e.newLayout().vec3f("position").vec2f("uv0").vec4u8("olidColor").freeze();o.PositionColorLayout=u,o.PositionLayout=t,o.PositionUvLayout=i,o.PositionUvOlidLayout=n,o.PositionUvf32Layout=f,o.PositionUvf32OlidLayout=v,Object.defineProperty(o,Symbol.toStringTag,{value:"Module"})});

@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports"],function(e){"use strict";e.blendModeFromString={normal:0,average:1,lighten:2,lighter:3,screen:5,plus:4,"color-dodge":6,darken:7,multiply:8,"color-burn":9,overlay:10,"soft-light":11,"hard-light":12,"vivid-light":13,hue:14,saturation:15,luminosity:16,color:17,difference:26,exclusion:27,minus:28,invert:29,reflect:30,"destination-over":18,"destination-atop":19,"destination-in":20,"destination-out":21,"source-atop":22,"source-in":23,"source-out":24,xor:25},e.isCompositeBlendMode=function(e){return 18===e||19===e||20===e||21===e||22===e||23===e||24===e||25===e},Object.defineProperty(e,Symbol.toStringTag,{value:"Module"})});

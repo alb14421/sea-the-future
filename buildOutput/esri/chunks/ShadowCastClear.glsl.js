@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports","../views/3d/webgl-engine/core/shaderLibrary/ScreenSpacePass.glsl","../views/3d/webgl-engine/core/shaderModules/glsl","../views/webgl/ShaderBuilder"],function(e,l,n,r){"use strict";function d(e){const d=new r.ShaderBuilder,{fragment:s}=d;d.include(l.ScreenSpacePass);const a=1===e.index?"vec2":"float",t="value";return d.outputs.add(t,a),s.main.add(n.glsl`${t} = ${a}(0.0);`),d}const s=Object.freeze(Object.defineProperty({__proto__:null,build:d},Symbol.toStringTag,{value:"Module"}));e.ShadowCastClear=s,e.build=d});

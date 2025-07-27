@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports","../../core/mathUtils","../../core/workers/WorkerHandle"],function(e,r,t){"use strict";function o(e,t){let o=t.width,s=t.height;return(e instanceof HTMLImageElement||e instanceof HTMLCanvasElement)&&(o=e.width,s=e.height),(e instanceof HTMLImageElement||e instanceof HTMLCanvasElement||e instanceof Uint8Array)&&(6408===t.pixelFormat||6407===t.pixelFormat)&&r.isPowerOfTwo(o)&&r.isPowerOfTwo(s)&&o>=16&&s>=16}class s extends t.WorkerHandle{constructor(e){super("TextureCompressionWorker","compress",{compress:e=>[e.data]},e)}async destroyWorkerAndSelf(){await this.broadcast({},"destroy"),this.destroy()}isCompressible(e,r){return o(e,r)}}e.TextureCompressionWorkerHandle=s,e.isCompressible=o,Object.defineProperty(e,Symbol.toStringTag,{value:"Module"})});

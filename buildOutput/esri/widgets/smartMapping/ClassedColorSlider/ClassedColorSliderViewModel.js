@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["../../../chunks/tslib.es6","../../../core/accessorSupport/decorators/property","../../../core/has","../../../core/Logger","../../../core/RandomLCG","../../../core/accessorSupport/decorators/subclass","../SmartMappingSliderViewModel"],function(e,o,r,s,t,c,a){"use strict";let n=class extends a{constructor(e){super(e),this.zoomingEnabled=!1}set breaks(e){super.breaks=e}getStopInfo(){const{breaks:e,max:o,min:r}=this,s=o-r;if(!e?.length||!s)return[];const t=[];return e.forEach(e=>{const{color:c,max:a,min:n}=e;let l,i;o===r?l=i=0:(l=(o-n)/s,i=(o-a)/s),t.push({offset:l,color:c},{offset:i,color:c})}),t}};return e.__decorate([o.property({readOnly:!0})],n.prototype,"zoomingEnabled",void 0),n=e.__decorate([c.subclass("esri.widgets.smartMapping.ClassedColorSlider.ClassedColorSliderViewModel")],n),n});

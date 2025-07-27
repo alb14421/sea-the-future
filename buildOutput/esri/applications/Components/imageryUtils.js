@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports","../../layers/support/rasterDatasets/pixelReader"],function(e,t){"use strict";const i=t.fetchPixelFeatureSet,r=t.readIntersectingPixels,a=t.computeRasterAttributeTable,s=t.createPixelFeatureSetCursor,u=t.computeBoxStatistics,c=t.computeStatisticsHistograms,o=t.identifyAveragePixelValue;e.computeBoxStatistics=u,e.computeRasterAttributeTable=a,e.computeStatisticsHistograms=c,e.createPixelFeatureSetCursor=s,e.fetchPixelFeatureSet=i,e.identifyAveragePixelValue=o,e.readIntersectingPixels=r,Object.defineProperty(e,Symbol.toStringTag,{value:"Module"})});

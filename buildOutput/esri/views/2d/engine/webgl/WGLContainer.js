@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["../../../../core/has","../brushes","../Container","./ClippingInfo"],function(e,s,n,i){"use strict";class r extends n.Container{set clips(e){super.clips=e,this._updateClippingInfo(e)}renderChildren(e){e.painter.setPipelineState(null),null==this._renderPasses&&(this._renderPasses=this.prepareRenderPasses(e.painter));for(const s of this._renderPasses)try{s.render(e)}catch(e){}}prepareRenderPasses(e){return[e.registerRenderPass({name:"clip",brushes:[s.brushes.clip],target:()=>this._clippingInfos,drawPhase:87})]}_updateClippingInfo(e){null!=this._clippingInfos&&(this._clippingInfos.forEach(e=>e.destroy()),this._clippingInfos=null),null!=e&&e.length&&(this._clippingInfos=e.items.map(e=>i.fromClipArea(this.stage,e))),this.requestRender()}}return r});

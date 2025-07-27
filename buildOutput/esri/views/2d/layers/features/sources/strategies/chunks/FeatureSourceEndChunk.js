@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports","./ASourceChunk","../../../support/FeatureSetReaderJSON"],function(e,t,r){"use strict";class u extends t.ASourceChunk{constructor(e,t){super(),this.chunkId=e,this.normalizedChunkId=this.chunkId,this._empty=r.FeatureSetReaderJSON.empty(t)}get reader(){return this._empty}get queryInfo(){return{}}get first(){return!1}get end(){return!0}get isTiled(){return!1}getTileReader(e){return this._empty}}e.FeatureSourceEndChunk=u,Object.defineProperty(e,Symbol.toStringTag,{value:"Module"})});

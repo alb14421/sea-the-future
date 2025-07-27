@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["require","exports","../../core/shaderTechnique/ReloadableShaderModule","../../core/shaderTechnique/ShaderTechnique","../../lib/DefaultVertexBufferLayouts","../../../../../chunks/Magnifier.glsl","../../../../webgl/renderState"],function(e,i,r,l,n,t,a){"use strict";class o extends l.ShaderTechnique{constructor(i,l){super(i,l,new r.ReloadableShaderModule(t.Magnifier,()=>new Promise((i,r)=>e(["../../shaders/Magnifier.glsl"],i,r))),n.Pos2Locations)}initializePipeline(){return a.makePipelineState({blending:a.premultipliedAlpha,depthTest:null,depthWrite:null,colorWrite:a.defaultColorWrite})}}i.MagnifierTechnique=o,Object.defineProperty(i,Symbol.toStringTag,{value:"Module"})});

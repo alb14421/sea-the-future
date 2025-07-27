@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports","../../../chunks/tslib.es6","../../../core/JSONSupport","../../../core/accessorSupport/decorators/property","../../../core/has","../../../core/Logger","../../../core/RandomLCG","../../../core/accessorSupport/decorators/subclass"],function(e,r,t,o,s,a,c,p){"use strict";return e.default=class extends t.JSONSupport{get affectsPixelSize(){return!1}forwardTransform(e){return e}inverseTransform(e){return e}},r.__decorate([o.property()],e.default.prototype,"affectsPixelSize",null),r.__decorate([o.property({json:{write:!0}})],e.default.prototype,"spatialReference",void 0),e.default=r.__decorate([p.subclass("esri.layers.support.rasterTransforms.BaseRasterTransform")],e.default),e.default});

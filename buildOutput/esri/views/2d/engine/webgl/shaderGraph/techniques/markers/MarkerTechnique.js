@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports","../FeatureTechnique","../featureTechniqueUtils","./MarkerShader"],function(e,t,r,s){"use strict";class i extends t.FeatureTechnique{constructor(){super(...arguments),this.type=17,this.shaders={geometry:new s.MarkerShader},this.symbologyPlane=2}render(e,t){const{context:s,painter:i}=e,n=t.instance.getInput();i.setShader({shader:this.shaders.geometry,uniforms:{...r.resolveDynamicUniforms(e,t.target,n.uniforms),...r.getFeatureUniforms(e,t.target),mosaicInfo:i.textureManager.getMosaicInfo(s,t.textureKey,!0)},defines:{...r.getSelectionDefines(e)},optionalAttributes:n.optionalAttributes,useComputeBuffer:r.isHittest(e)}),i.setPipelineState(r.getFeaturePipelineState(e)),i.submitDraw(e,t)}}e.MarkerTechnique=i,Object.defineProperty(e,Symbol.toStringTag,{value:"Module"})});

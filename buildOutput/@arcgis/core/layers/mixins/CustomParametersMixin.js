@@ -1,0 +1,5 @@
+/*
+All material copyright ESRI, All Rights Reserved, unless otherwise specified.
+See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+*/
+import{_ as s}from"../../chunks/tslib.es6.js";import{property as r}from"../../core/accessorSupport/decorators/property.js";import"../../core/lang.js";import"../../chunks/Logger.js";import{subclass as t}from"../../core/accessorSupport/decorators/subclass.js";import"../../chunks/ensureType.js";import"../../chunks/MapUtils.js";import"../../chunks/get.js";import"../../chunks/utils.js";import"../../chunks/handleUtils.js";import"../../chunks/metadata.js";import"../../core/Error.js";import"../../chunks/object.js";import"../../config.js";import"../../chunks/string.js";import"../../chunks/Lifecycle.js";import"../../chunks/tracking.js";import"../../chunks/Warning.js";const o=o=>{const e=o;let c=class extends e{constructor(){super(...arguments),this.customParameters=null}};return s([r({type:Object,json:{write:{overridePolicy:s=>({enabled:!!(s&&Object.keys(s).length>0)})}}})],c.prototype,"customParameters",void 0),c=s([t("esri.layers.mixins.CustomParametersMixin")],c),c};export{o as CustomParametersMixin};

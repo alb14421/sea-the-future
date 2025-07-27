@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  
+  <title>Sea The Future</title>
+  <link rel="icon" href="assets/logo.png" type="image/png" sizes="32x32" />
+  <!-- ArcGIS Maps SDK v4.33 -->
+  <link
+    rel="stylesheet"
+    href="https://js.arcgis.com/4.33/esri/themes/light/main.css"
+  />
+  <!-- <script src="https://js.arcgis.com/4.33/"></script> -->
+  <script type="importmap">
+            {
+                "imports": {
+                    "@arcgis/core/": "./buildOutput/@arcgis/core/"
+                }
+            }
+        </script>
+
+  <style>
+    html, body, #viewDiv {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    #header {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      display: flex;
+      align-items: center;
+      z-index: 99;            
+    }
+
+    #appLogo {
+      width: 180px;            
+      height: auto;
+      margin-right: 8px;     
+    }
+
+    #appTitle {
+      font-size: 20px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .esri-ui-top-left {
+      padding-top: 60px;      
+    }
+
+    .halo {
+      position: relative;
+      box-shadow: 0 0 8px 2px rgba(0, 200, 255, 0.8);
+      animation: halo-pulse 2s infinite;
+    }
+
+    @keyframes halo-pulse {
+      0%, 100% {
+        box-shadow: 0 0 8px 2px rgba(0, 200, 255, 0.6);
+      }
+      50% {
+        box-shadow: 0 0 16px 4px rgba(0, 200, 255, 1);
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Map container -->
+   <div id="header">
+    <img id="appLogo" src="assets/logo.png" alt="Logo">
+  </div>
+  <div id="viewDiv"></div>
+    <img
+      id="toggleViewBtn"
+      src="assets/2d-icon.png"
+      alt="Toggle 2D/3D view"
+      style="
+        position: absolute;
+        bottom: 30px;
+        right: 10px;
+        z-index: 99;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+      "
+    >
+
+  <script type="module">
+    //import * as reactiveUtils from "@arcgis/core/core/reactiveUtils.js";
+    import esriConfig from "@arcgis/core/config.js";
+    import Map from "@arcgis/core/Map.js";
+    import MapView from "@arcgis/core/views/MapView.js";
+    import Graphic from "@arcgis/core/Graphic.js";
+    import ImageryTileLayer from "@arcgis/core/layers/ImageryTileLayer.js";
+    //import Point from "@arcgis/core/geometry/Point.js";
+    //import * as webMercatorUtils from "@arcgis/core/geometry/support/webMercatorUtils.js";
+    import Sketch from "@arcgis/core/widgets/Sketch.js";
+    import GraphicsLayer from "@arcgis/core/layers/GraphicsLayer.js";
+    //import FeatureLayer from  "@arcgis/core/layers/FeatureLayer.js";
+    import Basemap from "@arcgis/core/Basemap.js";
+    import BasemapToggle from "@arcgis/core/widgets/BasemapToggle.js";
+    import LayerList from "@arcgis/core/widgets/LayerList.js";
+    import FlowRenderer from "@arcgis/core/renderers/FlowRenderer.js";
+    //import ColorVariable from "@arcgis/core/renderers/visualVariables/ColorVariable.js";
+    //import * as geometryEngine from "@arcgis/core/geometry/geometryEngine.js";
+    import SceneView from "@arcgis/core/views/SceneView.js";
+    import SketchViewModel from "@arcgis/core/widgets/Sketch/SketchViewModel.js";
+    import Expand from "@arcgis/core/widgets/Expand.js";
+    import VectorTileLayer from "@arcgis/core/layers/VectorTileLayer.js";
+    import Zoom from "@arcgis/core/widgets/Zoom.js";
+
+      // ——— API key ———
+      esriConfig.apiKey = "AAPTxy8BH1VEsoebNVZXo8HurA2PXQ7amZkHN3APxDs9DpML1jTAmLivGgyHQkVI8GkaJuK9Rta3_zsaCKuCQfCmqovZHyWEBgnEk4P-WBny6pELdMWHmJVEfdV9skda5rR4dma-ii-G313RpO6ooeOcpymZ-AFca8M0Y7NaenY8xeUHNxNU5d5p37VqJToj1L1yjfHloObcLRVjVNyanOYSHNQ2XK5_YfH5QSPRvDeh43Hh5egYaVv-gpxf6kgFNW6FAT1_aV2SXn1p";
+
+      const bathyDark = new VectorTileLayer({
+        portalItem: { id: "a57be56f4279434b9f400620e70a99f5" }
+      });
+      const bathyBasemap = new Basemap({
+        title: "Bathymetry Dark",
+        baseLayers: [bathyDark]
+      });
+      const map = new Map({
+        basemap: bathyBasemap
+      });
+      const urlParams = new URLSearchParams(location.search);
+      const use3D = urlParams.get("view") !== "2d";
+
+      const ViewCtor = use3D ? SceneView : MapView;
+
+      const viewOptions = {
+        container: "viewDiv",
+        map,
+        ...(use3D
+          ? {
+              // 3D camera & environment
+              camera: { x: 0, y: 20, z: 20000000 },
+              tilt: 0,
+              environment: { atmosphere: { quality: "high" }, starsEnabled: true }
+            }
+          : {
+              // 2D center & zoom
+              // center: [-117.0, 11.9],
+              zoom: 2
+            })
+      };
+
+      const view = new ViewCtor(viewOptions);
+
+      view.ui.remove("zoom");
+
+      const zoomWidget = new Zoom({ view });
+      view.ui.add(zoomWidget, "top-left");
+      zoomWidget.domNode.classList.add("halo");
+
+      const basemapToggle = new BasemapToggle({
+        view,
+        nextBasemap: "arcgis/imagery"
+      });
+      view.ui.add(basemapToggle, "top-left");
+      basemapToggle.domNode.classList.add("halo");
+      
+      const carbonProtectionLayer = new ImageryTileLayer({
+        portalItem: { id: "e1610a42eb3340209e06af024161b11e" },
+        //url: "https://tiledimageservices.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services/210923e_carbon_ranking_WM_1000_masked_mrf_lerc/ImageServer",
+        title: "GOC Priorities – Carbon Protection",
+        visible: false,
+        opacity: 0.4
+      });
+      const biodiversityProtectionLayer = new ImageryTileLayer({
+        portalItem: { id: "96bb07682ebf470c9855a0056efd1370" },
+        title: "GOC Priorities – Biodiversity Protection",
+        visible: false,
+        opacity: 0.4
+      });
+      const foodProvisionLayer = new ImageryTileLayer({
+        portalItem: { id: "705348c783454d4685c278555810f065" },
+        title: "GOC Priorities – Food Provision",
+        visible: false,
+        opacity: 0.4
+      });
+
+      const geometries = new window.Map();
+      const layer = new ImageryTileLayer({
+          url: "https://tiledimageservices8.arcgis.com/LLNIdHmmdjO2qQ5q/arcgis/rest/services/please/ImageServer",
+          title: "Winds",
+          visible: true,
+          renderer: {
+              type: "flow",
+              trailWidth: "2px",
+              // color: [50, 120, 240, 1],
+              density: 1,
+              visualVariables: [
+                  {
+                      type: "color",
+                      field: "Magnitude",
+                      stops: [
+                          { color: [40, 146, 199, 1], value: 0 },
+                          { color: [160, 194, 155, 1], value: 5 },
+                          { color: [218, 230, 119, 1], value: 10 },
+                      ],
+                  },
+              ],
+              geometries,
+          },
+          // spatialReference: { wkid: 4326 },
+          effect: "bloom(1.5, 0.5px, 0)",
+      });
+      map.addMany([carbonProtectionLayer, biodiversityProtectionLayer, foodProvisionLayer, layer]);
+
+
+
+      const toScreenGeometry = (graphic) => {
+        const geometry = [];
+        for (const [x, y] of graphic.geometry.rings[0]) {
+            const screen = view.toScreen({ x, y });
+            geometry.push([screen.x, screen.y]);
+        }
+        return geometry;
+    };
+
+    let flowLayerView = null;
+    layer.on("layerview-create", ({ view, layerView }) => {
+        const requestUpdate = layerView.requestUpdate;
+        layerView.requestUpdate = (updateGeometry = true) => {
+            if (updateGeometry) {
+                for (const graphic of graphicsLayer.graphics.items) {
+                    geometries.set(
+                        graphic.uid,
+                        toScreenGeometry(graphic),
+                    );
+                }
+            }
+            requestUpdate.apply(layerView);
+        };
+        flowLayerView = layerView;
+    });
+
+
+      const graphicsLayer = new GraphicsLayer({ title: 'Graphic Layer', visible: true });
+      map.add(graphicsLayer);
+
+      const sketchVM = new SketchViewModel({
+       view,
+       layer: graphicsLayer
+      });
+
+      const drawBtn = document.createElement("button");
+      drawBtn.innerHTML = '<span class="esri-icon-polygon" style="margin-right:4px;"></span> Draw';
+      drawBtn.className = "esri-widget esri-button";
+      drawBtn.style.margin = "10px";
+      drawBtn.classList.add("halo");
+      let isDrawing = false;
+      const origHTML = drawBtn.innerHTML;
+
+      view.ui.add(drawBtn, "top-right");
+
+      drawBtn.addEventListener("click", () => {
+        if (!isDrawing) {
+          graphicsLayer.removeAll();
+          geometries.clear();
+          if (flowLayerView){
+            flowLayerView.requestUpdate(false);
+          }
+          sketchVM.create("polygon");
+          drawBtn.innerHTML = '<span class="esri-icon-polygon" style="margin-right:4px;"></span> Cancel';
+          isDrawing = true;
+        } else {
+          sketchVM.cancel();
+          drawBtn.innerHTML = origHTML;
+          isDrawing = false;
+          graphicsLayer.removeAll();
+          geometries.clear();
+          if (flowLayerView){
+            flowLayerView.requestUpdate(false);
+          }
+        }
+      });
+
+      sketchVM.on("create", (event) => {
+        if (event.state === "complete") {
+          const {graphic} = event;
+                    geometries.set(
+                        graphic.uid,
+                        toScreenGeometry(graphic),
+                    );
+                flowLayerView.requestUpdate(false);
+        }
+      });
+
+      sketchVM.on("update", (event) => {
+        if (event.state === "complete") {
+            if (event.aborted) {
+                for (const graphic of event.graphics) {
+                    geometries.delete(graphic.uid);
+                }
+                flowLayerView.requestUpdate(false);
+            } else {
+                for (const graphic of event.graphics) {
+                    geometries.set(
+                        graphic.uid,
+                        toScreenGeometry(graphic),
+                    );
+                }
+                flowLayerView.requestUpdate(false);
+            }
+        }
+      });
+
+      const layerList = new LayerList({
+        view,
+        listItemCreatedFunction: ({ item }) => {
+          const allowed = [
+            carbonProtectionLayer, 
+            graphicsLayer, biodiversityProtectionLayer, 
+            foodProvisionLayer, layer
+          ];
+          if (!allowed.includes(item.layer)) {
+            item.panel   = null;
+            item.visible = false;
+          }
+        }
+      });
+
+      const layerListExpand = new Expand({
+        view,
+        content: layerList,
+        expandIconClass: "esri-icon-layer-list",
+        expandTooltip: "Show layers",
+        group: "bottom-left"
+      });
+      view.ui.add(layerListExpand, { position: "top-left" });
+      layerListExpand.domNode.classList.add("halo");
+      const toggleBtn = document.getElementById("toggleViewBtn");
+      toggleBtn.classList.add("halo");
+
+toggleBtn.src = use3D
+  ? "assets/2d-icon.png"    
+  : "assets/3d-icon.png";   
+
+toggleBtn.addEventListener("click", () => {
+  if (urlParams.get("view") === "2d") {
+    urlParams.set("view", "3d");
+  } else {
+    urlParams.set("view", "2d");
+  }
+  location.search = urlParams.toString();
+});
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports","../../../../core/mathUtils"],function(t,e){"use strict";function n(t){return isNaN(t)?255:t*(254/255)}const r=255;t.encodeNaNUInt8=function(t,e){for(let r=0;r<4;r++)t[r]=n(e[r]);return t},t.encodeSymbolColor=function(t,n,o){if(null==t||2===n)return o[0]=255,o[1]=255,o[2]=255,void(o[3]=255);const c=e.clamp(Math.round(85*t[3]),0,85),u=0===c||4===n?0:3===n?85:170;o[0]=e.clamp(Math.round(t[0]*r),0,r),o[1]=e.clamp(Math.round(t[1]*r),0,r),o[2]=e.clamp(Math.round(t[2]*r),0,r),o[3]=c+u},t.parseColorMixMode=function(t){switch(t){case"multiply":default:return 1;case"ignore":return 2;case"replace":return 3;case"tint":return 4}},Object.defineProperty(t,Symbol.toStringTag,{value:"Module"})});

@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["../chunks/tslib.es6","../Color","./ElevationProfileLine","../core/accessorSupport/decorators/property","../core/has","../core/Logger","../core/RandomLCG","../core/accessorSupport/decorators/subclass"],function(e,r,o,s,t,c,p,a){"use strict";let l=class extends o{constructor(e){super(e),this.type="query",this.color=new r("#db334a"),this.source=null}equals(e){return this===e||super.equals(e)&&this.source===e.source}};return e.__decorate([s.property()],l.prototype,"type",void 0),e.__decorate([s.property({type:r,nonNullable:!0})],l.prototype,"color",void 0),e.__decorate([s.property({clonable:"reference"})],l.prototype,"source",void 0),l=e.__decorate([a.subclass("esri.analysis.ElevationProfileLineQuery")],l),l});

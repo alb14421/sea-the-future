@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports","../../chunks/tslib.es6","../../core/Clonable","../../core/JSONSupport","../../core/accessorSupport/decorators/property","../../core/has","../../core/Logger","../../core/RandomLCG","../../core/accessorSupport/decorators/subclass","./UniqueValueClass"],function(e,r,o,s,t,a,u,c,p,l){"use strict";return e.default=class extends(o.ClonableMixin(s.JSONSupport)){constructor(e){super(e),this.heading=null,this.classes=null}},r.__decorate([t.property({type:String,json:{write:!0}})],e.default.prototype,"heading",void 0),r.__decorate([t.property({type:[l],json:{write:{isRequired:!0}}})],e.default.prototype,"classes",void 0),e.default=r.__decorate([p.subclass("esri.renderers.support.UniqueValueGroup")],e.default),e.default});

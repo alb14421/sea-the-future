@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.34/esri/copyright.txt for details.
+//>>built
+define(["exports","../../../chunks/tslib.es6","../../../core/Logger","../../../core/has","../../../core/RandomLCG","../../../core/Error","../../../core/accessorSupport/decorators/subclass","../engine/BitmapTileContainer"],function(e,i,t,r,a,s,o,l){"use strict";e.BitmapTileLayerView2D=e=>{const t=e;let r=class extends t{attach(){this.view.timeline.record(`${this.layer.title} (BitmapTileLayer) Attach`),this._bitmapView=new l.BitmapTileContainer(this._tileInfoView),this.container.addChild(this._bitmapView)}detach(){this.container.removeChild(this._bitmapView),this._bitmapView?.removeAllChildren(),this._bitmapView=null}};return r=i.__decorate([o.subclass("esri.views.2d.layers.BitmapTileLayerView2D")],r),r},Object.defineProperty(e,Symbol.toStringTag,{value:"Module"})});
